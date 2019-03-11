@@ -1,0 +1,38 @@
+<!-- views/create-categories.ejs -->
+<%- include('obj/header',{title: 'Echelon - Create Activation Code'}); %>
+<%- include('obj/navbar', {page:''}); %>
+
+<!-- BUILD OUT PAGE HERE -->
+<div class="container">
+    <div class="page-header text-center">
+        <h1><span class="fa fa-pencil"></span> Create Activation Code</h1>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+        <% if (sMsg.length > 0) { %>
+        <div class="alert alert-success"><%= sMsg %></div>
+        <% } %>
+        <form class="form-horizontal" action="/create/acode" method="POST">
+            <fieldset>
+                <legend>Activation Code Information</legend>
+                <div class="form-group">
+                    <label>Code</label>
+                    <input type="text" class="form-control" name="code">
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="hidden" name="active" value="false">
+                            <input type="checkbox" name="active" value="true">
+                            Active
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success btn-lg">Create</button>
+            </div>
+        </form>
+    </div>
+</div> 
+
+<%- include('obj/footer'); %>
