@@ -1,6 +1,10 @@
 (function($) {
   "use strict"; // Start of use strict
 
+    $('#collapsibleA, #collapsibleB, #collapsibleC, #collapsibleD').click(function(){
+        $(this).find('i').toggleClass('fa-caret-square-down fa-caret-square-up')
+    });
+    
   // Toggle the side navigation
   $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
     $("body").toggleClass("sidebar-toggled");

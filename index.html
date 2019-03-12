@@ -186,22 +186,13 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Valerie Luna</span>
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="profile.html">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -320,7 +311,7 @@
                       </div>
                     </div>
                   </form>
-                  <button class="collapsible ddb" id="collapsibleP" onclick="test()"><i class="far fa-caret-square-down"></i></button>
+                  <button class="collapsible ddb" id="collapsibleA" onclick="test()"><i class="far fa-caret-square-down"></i></button>
                   <h6 class="m-0 font-weight-bold text-primary">Plans: </h6>
                     <p id="demo"></p>
                 </div>
@@ -330,7 +321,7 @@
                     <!-- <%- include('obj/navbar', {page : 'plans'}); %> -->
 
                     <!-- BUILD PAGE HERE -->
-                    <div class="contentT" id="contentP">
+                    <div class="contentT" id="contentA">
                         <table class="table table-stripped table-hover" id="myTable">
                             <thead>
                                 <tr>
@@ -446,6 +437,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.js"></script>
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->

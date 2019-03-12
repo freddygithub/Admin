@@ -12289,3 +12289,11 @@ body.sidebar-toggled footer.sticky-footer {
   overflow: hidden;
   background-color: #f1f1f1;
 }
+
+.change-icon > .fa + .fa,
+.change-icon:hover > .fa {
+  display: none;
+}
+.change-icon:hover > .fa + .fa {
+  display: inherit;
+}
