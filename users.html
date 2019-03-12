@@ -113,22 +113,22 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="reports.html">
+        <a class="nav-link" href="tables.html">
           <i class="fas fa-fw fa-table"></i>
           <span>Reports</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="class.html">
-          <i class="fas fa-calendar-day"></i>
+          <i class="fas fa-fw fa-table"></i>
           <span>Classes</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="categories.html">
+        <a class="nav-link" href="tables.html">
           <i class="fas fa-paperclip"></i>
           <span>Categories</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="products.html">
+        <a class="nav-link" href="tables.html">
           <i class="fas fa-box-open"></i>
           <span>Products</span></a>
       </li>
@@ -154,7 +154,7 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <h3 class="m-0 font-weight-bold text-primary">Create Product</h3>
+            <h3 class="m-0 font-weight-bold text-primary"> <i class="fas fa-users"></i> Users</h3>
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
@@ -201,49 +201,133 @@
 
                       <!-- Content Row -->
           <div class="row">
-
-            <div class="col-xl-8 col-lg-7">
+            <div class="col-xl-11">
 
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h5 class="m-0 font-weight-bold text-primary">Product info: </h5>
+                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbar">
+                    <div class="input-group">
+                      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                    
+                  <h5 class="m-0 font-weight-bold text-primary"></h5>
                 </div>
-                <div class="card-body">
+                <div class="">
                   <div class="">
                       
-                  <!-- views/create-instructor.ejs -->
-                <!-- <%- include('obj/header',{title: 'Echelon - Create Product'}); %> -->
-                <!-- <%- include('obj/navbar', {page:''}); %> -->
+                    <!-- views/classes.ejs -->
+                    <!-- <%- include('obj/header', {title: 'Echelon - View Users'}) %> -->
+                    <!-- <%- include('obj/navbar', {page: 'users'}) %> -->
 
-                <!-- BUILD OUT PAGE HERE -->
-                <div class="container">
-                    <div class="col-sm-6 col-sm-offset-3">
-                       <!-- <% if (sMsg.length > 0) { %>
-                        <div class="alert alert-success"><%= sMsg %></div>
-                        <% } %> -->
-                        <form class="form-horizontal" action="/create/product" method="POST" enctype="multipart/form-data">
-                            <fieldset>
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control" name="iname">
-                                </div>
-                                <div class="form-group">
-                                        <label>Product Image</label>
-                                        <input type="file" class="form-control" name="pimg" id="pimg">
-                                </div>
-                                <div class="form-group">
-                                    <label id="pv" hidden>Preview</label>
-                                    <img id="pvimg" style="max-width:480px;max-height:360px;" />
-                                </div>
-                            </fieldset>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success btn-lg">Create</button>
-                            </div>
-                        </form>
+                    <!-- BUILD PAGE HERE -->
+                    <div class="container">
+                        <div class="page-header text-center">
+                           <!--  <% if (srch == true) {%><a href="<%= exportUrl %>" class="btn btn-primary btn-lg">Export</a><% } %> -->
+                        </div>
+                        <!-- Decide Pagination -->
+                        <!--  <%
+                            var pagination = "";
+                            var pagina = [];
+                            var range = 10;
+                            var start = 1;
+
+                            var pages = 1;
+
+                            if (total > 50) {
+                                pages = Math.ceil(total/50);
+
+
+                                if (page < (range / 2) + 1 ) {
+                                    start = 1;
+
+                                // Don't go beyond the last page 
+                                } else if (page >= (pages - (range / 2) )) {
+                                    start = Math.floor(pages - range + 1);
+
+                                } else {
+                                    start = (page - Math.floor(range / 2));
+                                }
+
+                                for (let i = start; i <= ((start + range) - 1); i++) {
+                                    var curl = pageUrl + 'p=' + i;
+                                    if (i == page) {
+                                      pagina.push(`<li class="page-item active"><a class="page-link" href="${curl}">${i}</a></li>`);   
+                                    } else {
+                                        pagina.push(`<li class="page-item"><a class="page-link" href="${curl}">${i}</a></li>`);
+                                    }
+                                }
+
+                                var next;
+                                var prev;
+
+                                if (page == 1) {
+                                    prev = `<li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                      </li>`;
+                                } else {
+                                    var ppage = parseInt(page) - 1;
+                                    var prevurl = pageUrl + 'p=' + ppage;
+                                    prev = `<li class="page-item">
+                                        <a class="page-link" href="${prevurl}" tabindex="-1">Previous</a>
+                                      </li>`;
+                                }
+
+                                if (page == pages) {
+                                    next = `<li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Next</a>
+                                      </li>`;
+                                } else {
+                                    var npage = parseInt(page) + 1;
+                                    var nexturl = pageUrl + 'p=' + npage;
+                                    next = `<li class="page-item">
+                                        <a class="page-link" href="${nexturl}" tabindex="-1">Next</a>
+                                      </li>`;
+                                }
+
+
+                                pagination = `<nav aria-label="...">
+                                    <ul class="pagination">
+                                      ${prev}
+                                      ${pagina.join('\n')}
+                                      ${next}
+                                    </ul>
+                                  </nav>`;
+
+
+                            }
+                        %> -->
+                        <!-- Pagination -->
+                        <!--  <%- pagination %> -->
+                        <table class="table table-stripped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Signed Up</th>
+                                    <th>Purchased From</th>
+                                    <th>Subscriber</th>
+                                    <th>View Admin</th>
+                                    <th>Action</th>
+                                </tr>
+                                <!-- <tbody>
+                                     <% users.forEach(function(user){ %>
+                                        <%- include('obj/usr', {user : user}); %>
+                                    <% }) %> 
+                                </tbody> -->
+                            </thead>
+                        </table>
+                        <!-- <%- pagination %> -->
+                        <!-- Pagination -->
                     </div>
-                </div> 
-                <!-- <%- include('obj/footer'); %> -->
-                    
+
+                    <!-- <%- include('obj/footer') %> -->
+                      
                 </div>
               </div>
             </div>
@@ -324,6 +408,10 @@
 
         document.getElementById("pv").hidden = false;
     };
+      
+    $('#product').selectize({
+        plugins:['remove_button']
+    });
 </script>
 
 </body>

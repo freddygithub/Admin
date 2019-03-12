@@ -113,22 +113,22 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="reports.html">
+        <a class="nav-link" href="tables.html">
           <i class="fas fa-fw fa-table"></i>
           <span>Reports</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="class.html">
-          <i class="fas fa-calendar-day"></i>
+        <a class="nav-link" href="classes.html">
+          <i class="fas fa-fw fa-table"></i>
           <span>Classes</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="categories.html">
+        <a class="nav-link" href="tables.html">
           <i class="fas fa-paperclip"></i>
           <span>Categories</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="products.html">
+        <a class="nav-link" href="tables.html">
           <i class="fas fa-box-open"></i>
           <span>Products</span></a>
       </li>
@@ -154,7 +154,7 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <h3 class="m-0 font-weight-bold text-primary">Create Product</h3>
+            <h3 class="m-0 font-weight-bold text-primary"><span class="fa fa-bicycle"></span> Rides</h3>
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
@@ -201,52 +201,109 @@
 
                       <!-- Content Row -->
           <div class="row">
-
-            <div class="col-xl-8 col-lg-7">
+            <div class="col-xl-11">
 
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h5 class="m-0 font-weight-bold text-primary">Product info: </h5>
-                </div>
-                <div class="card-body">
-                  <div class="">
-                      
-                  <!-- views/create-instructor.ejs -->
-                <!-- <%- include('obj/header',{title: 'Echelon - Create Product'}); %> -->
-                <!-- <%- include('obj/navbar', {page:''}); %> -->
-
-                <!-- BUILD OUT PAGE HERE -->
-                <div class="container">
-                    <div class="col-sm-6 col-sm-offset-3">
-                       <!-- <% if (sMsg.length > 0) { %>
-                        <div class="alert alert-success"><%= sMsg %></div>
-                        <% } %> -->
-                        <form class="form-horizontal" action="/create/product" method="POST" enctype="multipart/form-data">
-                            <fieldset>
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control" name="iname">
-                                </div>
-                                <div class="form-group">
-                                        <label>Product Image</label>
-                                        <input type="file" class="form-control" name="pimg" id="pimg">
-                                </div>
-                                <div class="form-group">
-                                    <label id="pv" hidden>Preview</label>
-                                    <img id="pvimg" style="max-width:480px;max-height:360px;" />
-                                </div>
-                            </fieldset>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success btn-lg">Create</button>
-                            </div>
-                        </form>
+                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbar">
+                    <div class="input-group">
+                      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
                     </div>
-                </div> 
-                <!-- <%- include('obj/footer'); %> -->
+                  </form>
                     
+                  <button class="collapsible ddb" id="collapsibleD"><i class="far fa-caret-square-down"></i></button>
+                  <h5 class="m-0 font-weight-bold text-primary">OnDemand</h5>
+                </div>
+                <div class="">
+                  <div class="contentT" id="contentD">
+                      
+                        <!-- views/classes.ejs -->
+                        <!-- <%- include('obj/header', {title: 'Echelon - View Rides'}) %> -->
+                        <!-- <%- include('obj/navbar', {page: 'reports'}) %> -->
+
+                        <!-- BUILD PAGE HERE -->
+                        <div class="container">
+                                <table class="table table-stripped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Instructor</th>
+                                            <th>Total Rides</th>
+                                        </tr>
+                                        <!-- <tbody>
+                                            <% rides.forEach(function(ride) { %>
+                                                <%- include('obj/ride', {ride : ride}); %>
+                                            <% }); %>
+                                        </tbody> -->
+                                    </thead>
+                                </table>
+                            </div>
+                        <!-- <%- include('obj/footer') %> -->
+                      
                 </div>
               </div>
             </div>
+                
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbar">
+                    <div class="input-group">
+                      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <button class="collapsible ddb" id="collapsibleC"><i class="far fa-caret-square-down"></i></button>
+                  <h5 class="m-0 font-weight-bold text-primary"> Classes</h5>
+                </div>
+                <div class="">
+                  <div>
+                      
+                        <!-- views/classes.ejs -->
+                        <!-- <%- include('obj/header', {title: 'Echelon - View Rides'}) %> -->
+                        <!-- <%- include('obj/navbar', {page: 'reports'}) %> -->
+
+                        <!-- BUILD PAGE HERE -->
+                        <div class="contentT" id="contentC">
+                                <table class="table table-stripped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Instructor</th>
+                                            <th>Total Rides</th>
+                                        </tr>
+                                            <tr>
+                                                <td>
+                                                    hello
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    hello
+                                                </td>
+                                            </tr>
+                                        <!-- <tbody>
+                                            <% rides.forEach(function(ride) { %>
+                                                <%- include('obj/ride', {ride : ride}); %>
+                                            <% }); %>
+                                        </tbody> -->
+                                    </thead>
+                                </table>
+                            </div>
+                        <!-- <%- include('obj/footer') %> -->
+                      
+                </div>
+              </div>
+            </div>
+                
           </div>
             </div>
         </div>
@@ -324,6 +381,11 @@
 
         document.getElementById("pv").hidden = false;
     };
+      
+    $('#product').selectize({
+        plugins:['remove_button']
+    });
+    
 </script>
 
 </body>
