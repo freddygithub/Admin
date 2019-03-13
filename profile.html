@@ -80,7 +80,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Send Actions:</h6>
             <a class="collapse-item" href="global-apn.html">Global Notification</a>
-            <a class="collapse-item" href="#">User Notification [SOON]</a>
+            <a class="collapse-item" href="#">User Notification [SOON] </a>
           </div>
         </div>
       </li>
@@ -174,10 +174,6 @@
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
-                </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -194,32 +190,79 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-                      <!-- Content Row -->
-          <div class="row">
-            <div class="col-xl-11">
-              <div class="card shadow mb-4">
+    <!-- Content Row -->
+      <div class="row">
+        <div class="col-xl-11">
+          <div class="card shadow mb-4">
+                    
+            <div class="container bootstrap snippet">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
-                        </div>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                      <div class="text-center">
+                        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                        <br><br>
+                        <h6>Upload a different photo...</h6>
+                        <input type="file" class="text-center center-block file-upload">
+                      </div>
+                        <br>
+
+                      <ul class="list-group">
+                        <li class="list-group-item text-muted">Activity </li>
+                      </ul> 
+
                     </div>
-                    <div class="col-md-6">
-                        <div class="profile-head">
-                            <br>
-                            <h5>
-                                Username: Martinez Testing
-                            </h5>
-                            <h5>
-                                Email: email@gmail.com
-                            </h5>
+                    <!--/col-3-->
+                    <div class="col-sm-9">
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="home">
+                              <form class="form" action="##" method="post" id="registrationForm">
+                                  <div class="form-group">
+                                      <div class="col-xs-6">
+                                          <label for="first_name"><h4>Username</h4></label>
+                                          <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="form-group">
+                                      <div class="col-xs-6">
+                                          <label for="email"><h4>Email</h4></label>
+                                          <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <div class="col-xs-6">
+                                          <label for="password"><h4>Password</h4></label>
+                                          <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+
+                                      <div class="col-xs-6">
+                                        <label for="password2"><h4>Verify</h4></label>
+                                          <input type="password" class="form-control" name="password2" id="password2" placeholder="password" title="enter your password.">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                       <div class="col-xs-12">
+                                            <br>
+                                            <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                                            <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                                        </div>
+                                  </div>
+                            </form>
+                          <hr>
+                         </div>
+                          <!--/tab-pane-->
                         </div>
                     </div>
                 </div>
-            </div>
           </div>
         </div>
-        </div>
+       </div>
         <!-- /.container-fluid -->
 
       </div>

@@ -12255,6 +12255,7 @@ body.sidebar-toggled footer.sticky-footer {
   float: left;
   border: none;
   padding-right: 10px;
+  background-color: #f8f9fc;
 }
 
 .contentT {
@@ -12280,6 +12281,11 @@ body.sidebar-toggled footer.sticky-footer {
   margin: 0 auto;
   padding: 0px 100px;  
 }
+.centerDC{
+  width: 800px; 
+  margin: 0 auto;
+  padding: 0px 100px;  
+}
 .padd{
   padding: 0px 200px;
 }
@@ -12296,4 +12302,24 @@ body.sidebar-toggled footer.sticky-footer {
 }
 .change-icon:hover > .fa + .fa {
   display: inherit;
+}
+.spacey{
+    display: inline-block;
+}
+.shortcuts{
+    color: white;
+}
+.checked {
+  color: orange;
+}
+.export{
+    font-size: 12px;
+}
+input[type='file'] {
+  color: transparent;
+}
+.file-upload{  
+}
+.dropdownButton{
+    background-color: #f8f9fc;
 }

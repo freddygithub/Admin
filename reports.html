@@ -173,10 +173,6 @@
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
-                </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -246,17 +242,16 @@
                 </div>
                 <div class="">
                   <div>
-                        <div class="contentT" id="contentD">
-                            <table class="table table-stripped table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                      
+                    <div class="contentT" id="contentD">
+                        <table class="table table-stripped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
               </div>
             </div>
@@ -293,60 +288,87 @@
               </div>
             </div>
           
-                <div>
-                  <a href="#" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-file-export"></i>
-                    </span>
-                    <span class="text">Export All Emails</span>
-                  </a>
-                  <a href="#" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-file-export"></i>
-                    </span>
-                    <span class="text">Export Paid Emails</span>
-                  </a>
-                  <a href="#" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-file-export"></i>
-                    </span>
-                    <span class="text">Export Unpaid Emails</span>
-                  </a>
-                    <br><br>
-                  <a href="#" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fab fa-apple"></i>
-                    </span>
-                    <span class="text">Export IOS Paid Emails</span>
-                  </a>
-                  <a href="#" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fab fa-apple"></i>
-                    </span>
-                    <span class="text">Export IOS Unpaid Emails</span>
-                  </a>
-                  <a href="#" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-chart-line"></i>
-                    </span>
-                    <span class="text">Marking Reports</span>
-                  </a>
-                    <br><br>
-                  <a href="#" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fab fa-android"></i>
-                    </span>
-                    <span class="text">Export Android Paid Emails</span>
-                  </a>
-                  <a href="#" class="btn btn-primary btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fab fa-android"></i>
-                    </span>
-                    <span class="text">Export Android Unpaid Emails</span>
-                  </a>
-                    <br><br>
+                      <!-- Area Chart -->
+            <div class="col-xl">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Exporting: </h6>
                 </div>
-          
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="">
+                        <div class="row1">
+                            <div class="block1">
+                              <a href="#" class="btn btn-primary btn-icon-split export">
+                                <span class="icon text-white-50">
+                                  <i class="fas fa-file-export"></i>
+                                </span>
+                                <span class="text">All Emails</span>
+                              </a>
+                            <br><br>
+                              <a href="#" class="btn btn-primary btn-icon-split export">
+                                <span class="icon text-white-50">
+                                  <i class="fas fa-file-export"></i>
+                                </span>
+                                <span class="text">Paid Emails</span>
+                              </a>
+                            <br><br>
+                              <a href="#" class="btn btn-primary btn-icon-split export">
+                                <span class="icon text-white-50">
+                                  <i class="fas fa-file-export"></i>
+                                </span>
+                                <span class="text">Unpaid Emails</span>
+                              </a>
+                            </div>
+                            <div class="block1">
+                              <a href="#" class="btn btn-primary btn-icon-split export">
+                                <span class="icon text-white-50">
+                                  <i class="fab fa-apple"></i>
+                                </span>
+                                <span class="text">IOS Paid Emails</span>
+                              </a>
+                            <br><br>
+                              <a href="#" class="btn btn-primary btn-icon-split export">
+                                <span class="icon text-white-50">
+                                  <i class="fab fa-apple"></i>
+                                </span>
+                                <span class="text">IOS Unpaid Emails</span>
+                              </a>
+                            <br><br>
+                              <a href="#" class="btn btn-primary btn-icon-split export">
+                                <span class="icon text-white-50" style="">
+                                  <i class="fas fa-chart-line"></i>
+                                </span>
+                                <span class="text">Marking Reports</span>
+                              </a>
+                            </div>
+                            <div class="block1">
+                              <a href="#" class="btn btn-primary btn-icon-split export">
+                                <span class="icon text-white-50">
+                                  <i class="fab fa-android"></i>
+                                </span>
+                                <span class="text">Android Paid Emails</span>
+                              </a>
+                            <br><br>
+                              <a href="#" class="btn btn-primary btn-icon-split export">
+                                <span class="icon text-white-50">
+                                  <i class="fab fa-android"></i>
+                                </span>
+                                <span class="text">Android Unpaid Emails</span>
+                              </a>
+                            <br><br>
+                            <a href="#" class="btn btn-primary btn-icon-split export">
+                                <span class="icon text-white-50">
+                                  <i class="fab fa-android"></i>
+                                </span>
+                                <span class="text">Android Unpaid Emails</span>
+                              </a>
+                            </div>
+                        </div>
+                </div>
+              </div>
+            </div>
           
       </div>
       <!-- End of Main Content -->

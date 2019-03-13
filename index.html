@@ -152,7 +152,7 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <h3 class="h3 mb-0 text-gray-800">Dashboard</h3>
+            <h3 class="m-0 font-weight-bold text-primary">Dashboard</h3>
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
@@ -212,12 +212,86 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1></h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
           </div>
 
           <!-- Content Row -->
           <div class="row">
+              
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">New Users (Monthly)</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">5,902</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Rides (Weekly)</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">23,423</div>
+                    </div>
+                    <div class="col-auto">
+                      <span class="fa fa-bicycle fa-2x"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Users (ToDate)</div>
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">210,274</div>
+                        </div>
+                        <div class="col">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-users fa-2x"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">App reviews</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">1,538</div>
+                    </div>
+                    <div class="col-auto">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Content Row -->
@@ -235,11 +309,7 @@
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                        
                     </div>
                   </div>
                 </div>
@@ -263,11 +333,7 @@
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                        
                     </div>
                   </div>
                 </div>
@@ -292,18 +358,120 @@
             </div>
           </div>
 
+            <div class="row">
+            <div class="col-xl">
+
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary"> Shortcuts</h6>
+                </div>
+                <div class="">
+                      
+                    <div class="container">
+                        <div class="centerCC">
+                            <div class="row1">
+                                <div class="block1">
+                                    <br>
+                                    <div class="col-lg">
+                                      <div class="card bg-danger text-white shadow">
+                                            <a class="shortcuts card-body" href="rides.html">
+                                              <span class="fa fa-bicycle"></span> Rides
+                                            </a>
+                                      </div>
+                                    </div>
+                                    <br>
+                                    <div class="col-lg">
+                                      <div class="card bg-success text-white shadow">
+                                            <a class="shortcuts card-body" href="users.html">
+                                              <i class="fas fa-users"></i> Users
+                                            </a>
+                                      </div>
+                                    </div>
+                                    <br>
+                                    <div class="col-lg">
+                                      <div class="card bg-warning text-white shadow">
+                                            <a class="shortcuts card-body" href="instructors.html">
+                                              <i class="fas fa-chalkboard-teacher"></i> Instructors
+                                            </a>
+                                      </div>
+                                    </div>
+
+                                </div>
+                                <div class="block1 spacer">
+                                    <br>
+                                    <div class="col-lg">
+                                      <div class="card bg-success text-white shadow">
+                                            <a class="shortcuts card-body" href="create-class.html">
+                                              <i class="fas fa-calendar-day"></i> Create Class
+                                            </a>
+                                      </div>
+                                    </div>
+                                    <br>
+                                    <div class="col-lg">
+                                      <div class="card bg-warning text-white shadow">
+                                            <a class="shortcuts card-body" href="create-plans.html">
+                                              <i class="fas fa-address-book"></i> Create Plan
+                                            </a>
+                                      </div>
+                                    </div>
+                                    <br>
+                                    <div class="col-lg mb-4">
+                                      <div class="card bg-secondary text-white shadow">
+                                            <a class="shortcuts card-body" href="plans.html">
+                                              <i class="fas fa-clipboard-list"></i> Subscriptions
+                                            </a>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="block1 spacer">
+                                    <br>
+                                    <div class="col-lg">
+                                      <div class="card bg-primary text-white shadow">
+                                            <a class="shortcuts card-body" href="filters.html">
+                                              <i class="fa fa-paperclip"></i> Filters
+
+                                            </a>
+                                      </div>
+                                    </div>
+                                    <br>
+                                    <div class="col-lg">
+                                      <div class="card bg-info text-white shadow">
+                                            <a class="shortcuts card-body" href="reports.html">
+                                              <i class="fas fa-address-book"></i> Reports
+                                            </a>
+                                      </div>
+                                    </div>
+                                    <br>
+                                    <div class="col-lg mb-4">
+                                      <div class="card bg-danger text-white shadow">
+                                            <a class="shortcuts card-body" href="categories.html">
+                                              <i class="fa fa-paperclip"></i> Categories
+                                            </a>
+                                      </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                      
+              </div>
+            </div>
+          </div>
+        </div>
+        
+            
           <!-- Content Row -->
           <div class="row">
-
+                  
             <!-- Content Column -->
             <div class="col-lg-12">
-
               <!-- Project Card Example -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbar">
                     <div class="input-group">
-                      <input id="searchBar" onkeyup="mySearchFunction()" type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                      <input id="searchBar" type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                       <div class="input-group-append">
                         <button class="btn btn-primary" type="button">
                           <i class="fas fa-search fa-sm"></i>
@@ -312,8 +480,7 @@
                     </div>
                   </form>
                   <button class="collapsible ddb" id="collapsibleA" onclick="test()"><i class="far fa-caret-square-down"></i></button>
-                  <h6 class="m-0 font-weight-bold text-primary">Plans: </h6>
-                    <p id="demo"></p>
+                  <h6 class="m-0 font-weight-bold text-primary">Plans </h6>
                 </div>
                 <div class="card-body">
                     <!-- views/categories.ejs -->
@@ -381,12 +548,12 @@
 
             <div class="col-lg-6 mb-4">
             </div>
-          </div>
 
         </div>
         <!-- /.container-fluid -->
 
       </div>
+    </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->
