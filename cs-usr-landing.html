@@ -143,7 +143,6 @@
 
     </ul>
     <!-- End of Sidebar -->
-
       
       
     <!-- Content Wrapper -->
@@ -154,7 +153,7 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-<h3 class="m-0 font-weight-bold text-primary"><i class="fa fa-paperclip"></i> Categories</h3>
+            <h3 class="m-0 font-weight-bold text-primary">Create Instructor</h3>
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
@@ -190,66 +189,101 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-                      <!-- Content Row -->
+        <!-- Content Row -->
           <div class="row">
-            <div class="col-xl-11">
-
+              
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-12">
               <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbar">
-                    <div class="input-group">
-                      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                      <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                          <i class="fas fa-search fa-sm"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                    
-                  <h5 class="m-0 font-weight-bold text-primary"></h5>
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Support Users</h6>
                 </div>
-                <div class="">
-                  <div class="">
-                      
-                    <!-- views/categories.ejs -->
-                    <!-- <%- include('obj/header', {title : 'Echelon - Categories'}); %> -->
-                    <!-- <%- include('obj/navbar', {page : 'categories'}); %> -->
-
-                    <!-- BUILD PAGE HERE -->
-                    <div class="container">
-                        <table class="table table-stripped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        Name
-                                    </th>
-                                    <th>
-                                        Connect
-                                    </th>
-                                    <th>
-                                        Action
-                                    </th>
-                                </tr>
-                            </thead>
-                            <!-- <tbody>
-                                <% categories.forEach(function(cat) { %>
-                                    <%- include('obj/category', {category : cat}); %>
-                                <% }) %>
-                            </tbody> -->
-                        </table>
-                    </div>
-                    <!-- <%- include('obj/footer'); %> -->
-                      
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="">
+                        <div class="row1">
+                            <div class="block1">
+                                <h5>First Name:&nbsp;<small class="text-muted"></small></h5>
+                                <h5>Last Name:&nbsp;<small class="text-muted"></small></h5>
+                                <h5>E-Mail:&nbsp;<small class="text-muted"></small></h5>
+                                <h5>Phone Number:&nbsp;<small class="text-muted"></small></h5>
+                                <h5>Address:&nbsp;<small class="text-muted"></small></h5>
+                                <h5>City:&nbsp;<small class="text-muted"></small></h5>
+                                <h5>State/Province:&nbsp;<small class="text-muted"></small></h5>
+                                <h5>Zip/Postal Code:&nbsp;<small class="text-muted"></small></h5>
+                                    <h5>Country:&nbsp;<small class="text-muted"></small></h5>
+                                    <h5>Platform:&nbsp;<small class="text-muted"></small></h5>
+                                    <h5>Purchased From:&nbsp;<small class="text-muted"></small></h5>
+                            </div>
+                                <div class="block1">
+                                    <div class="row" style="margin-top : 5px;">
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Set Password</button>
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#emailModal">Update E-Mail</button>  
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#secModal">Update Security</button>
+                                    </div>
+                                    <div class="row" style="margin-top : 5px;">
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#familyModal">Add Family Member</button>
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#primaryModal">Make Primary Account</button>
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uinfoModal">Edit Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+        </div>
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Selected Products</h6>
+                    
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                      
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Content Column -->
+            <div class="col-lg-6 mb-4">
+              <!-- Project Card Example -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Family Members</h6>
+                </div>
+                <div class="card-body">
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+              <!-- Illustrations -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+                </div>
+                <div class="card-body">
+                  <div class="text-center">
+                      
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
-        <!-- /.container-fluid -->
 
-      </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->
@@ -322,9 +356,73 @@
         document.getElementById("pv").hidden = false;
     };
       
-    $('#product').selectize({
-        plugins:['remove_button']
-    });
+                    // Create a Stripe client.
+              var stripe = Stripe('pk_live_QFcaIyErmhCeRY13CY6F8xK8');
+              // Create an instance of Elements.
+              var elements = stripe.elements();
+              // Custom styling can be passed to options when creating an Element.
+              // (Note that this demo uses a wider set of styles than the guide below.)
+              var style = {
+                  base: {
+                      color: '#32325d',
+                      lineHeight: '18px',
+                      fontFamily: '"Montserrat", sans-serif',
+                      fontSmoothing: 'antialiased',
+                      fontSize: '16px',
+                      '::placeholder': {
+                      color: '#aab7c4'
+                      }
+                  },
+                  invalid: {
+                      color: '#fa755a',
+                      iconColor: '#fa755a'
+                  }
+              };
+              // $(function() {
+              // Create an instance of the card Element.
+              var card = elements.create('card', {style: style});
+              // Add an instance of the card Element into the `card-element` <div>.
+              card.mount('#card-element');
+              // Handle real-time validation errors from the card Element.
+              card.addEventListener('change', function(event) {
+              var displayError = document.getElementById('card-errors');
+              if (event.error) {
+                  displayError.textContent = event.error.message;
+              } else {
+                  displayError.textContent = '';
+              }
+              });
+              // Handle form submission.
+              var form = document.getElementById('payment-form');
+              form.addEventListener('submit', function(event) {
+              
+                  if ($('#subscription').val() == 'none' && $('')) {
+                      $('#payment-form').submit();
+                  } else {
+                      event.preventDefault();
+                      stripe.createToken(card).then(function(result) {
+                          if (result.error) {
+                          // Inform the user if there was an error.
+                          var errorElement = document.getElementById('card-errors');
+                          errorElement.textContent = result.error.message;
+                          } else {
+                          // Send the token to your server.
+                          stripeTokenHandler(result.token);
+                          }
+                      });
+                  }
+              });
+              function stripeTokenHandler(token) {
+                  // Insert the token ID into the form so it gets submitted to the server
+                  var form = document.getElementById('payment-form');
+                  var hiddenInput = document.createElement('input');
+                  hiddenInput.setAttribute('type', 'hidden');
+                  hiddenInput.setAttribute('name', 'stripeToken');
+                  hiddenInput.setAttribute('value', token.id);
+                  form.appendChild(hiddenInput);
+                  // Submit the form
+                  form.submit();
+              }
 </script>
 
 </body>

@@ -4933,6 +4933,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 }
 
 @media (min-width:576px) {
+        
   .card-deck {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -12322,4 +12323,7 @@ input[type='file'] {
 }
 .dropdownButton{
     background-color: #f8f9fc;
+}
+.form-control{
+    
 }
