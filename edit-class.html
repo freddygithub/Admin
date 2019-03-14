@@ -153,7 +153,7 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <h3 class="m-0 font-weight-bold text-primary">Create Instructor</h3>
+        <h3 class="m-0 font-weight-bold text-primary">Edit a Class</h3>
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
@@ -161,7 +161,7 @@
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-
+             
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -189,38 +189,141 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-        <!-- Content Row -->
+                      <!-- Content Row -->
           <div class="row">
-
-            <div class="col-xl-8 col-lg-7">
-
+            <div class="col-xl">
+                
               <div class="card shadow mb-4">
+                  
                 <div class="card-header py-3">
-                  <h5 class="m-0 font-weight-bold text-primary">Instructor info: </h5>
+                  <h5 class="m-0 font-weight-bold text-primary">Class info: </h5>
                 </div>
+                  
                 <div class="card-body">
-                  <div class="chart-bar">
-                    <div class="col-sm-6 col-sm-offset-3">
-                    <form class="form-horizontal" action="/create/instructor" method="POST" enctype="multipart/form-data">
-                        <fieldset>
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" name="iname">
-                            </div>
-                            <div class="form-group">
-                                    <button type="submit" class="btn btn-info"><i class="fas fa-cloud-upload-alt"></i> Upload</button>
-                                    <label>Profile Image</label>
-                            </div>
-                            <div class="form-group">
-                                <label id="pv" hidden>Preview</label>
-                                <img id="pvimg" style="max-width:480px;max-height:360px;" />
-                            </div>
-                        </fieldset>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-success btn-lg">Create</button>
+                  <div class="">
+                      
+                    <!-- views/create-class.ejs
+                    <%- include('obj/header',{title: 'Echelon - Create Class'}); %>
+                    <%- include('obj/navbar', {page:''}); %>
+                    -->
+                    <!-- BUILD OUT PAGE HERE -->
+                    <div class="container centerCC">
+                        <div class="">
+                           <!-- <% if (successMsg.length > 0) { %> -->
+                            <div class="alert alert-success">Your class has been successfully created!</div>
+                          <!--  <% } %> -->
+                            <form class="form-horizontal" action="/create/class" method="POST" enctype="multipart/form-data">
+                                <div class="row1">
+                                    <div class="block1">
+                                        <label>Name</label>
+                                        <input type="text" class="form-control" name="cname" value="<%= class_.name %>">
+                                        <br>
+                                        <label>Date</label>
+                                        <input type="datetime-local" class="form-control" name="cdate" value="<%= date_w_offset.toISOString().split('.')[0] %>">
+                                        <br>
+                                        <label>Music Genres</label>
+                                        <input type="text" class="form-control" name="genres" value="<%= (class_.genres) ? class_.tags.join(' ') : '' %>">
+                                        <br>
+                                        <label>Category</label>
+                                        <select class="form-control" name="catid" id="cats">
+                                         <!--   <% cats.forEach(function(cat){ %>
+                                                <option value="<%= cat.name%>"><%= cat.name %></option>
+                                            <% }); %> -->
+                                        </select>
+                                        <br>
+                                        <label>Instructor</label>
+                                            <select name="instrid" class="form-control" id="isntrs">
+                                             <!--   <% instr.forEach(function(inst){ %>
+                                                    <option value="<%= inst.name %>" <%= (inst.name == class_.iid) ? 'selected' : ''%>><%= inst.name %></option>
+                                                <% }); %> -->
+                                            </select>
+                                        <br>
+                                    </div>
+                                    <div class="block1 spacer">
+                                        <label>Description</label>
+                                        <input type="text" class="form-control" name="cdesc" value="<%= class_.desc %>">
+                                        <br>
+                                        <label>Tags</label>
+                                        <input type="text" class="form-control" name="tags" value="<%= (class_.tags) ? class_.tags.join(' ') : '' %>">
+                                        <br>
+                                        <label>Length (Hours:Minutes)</label>
+                                        <input type="text" class="form-control" name="len" value="<%= (class_.len) ? class_.len : '' %>">
+                                        <br>
+                                        <label for="ctype">Class Type</label>
+                                          <!--  <select class="form-control" name="ctype" id="ctype" required>
+                                                <option value="cycling" <%= (class_.classType == 'cycling') ? 'selected' : '' %>>Cycling</option>
+                                                <option value="strength" <%= (class_.classType == 'strength') ? 'selected' : '' %>>Strength</option>
+                                                <option value="tone" <%= (class_.classType == 'tone') ? 'selected' : '' %>>Tone</option>
+                                                <option value="stretch" <%= (class_.classType == 'stretch') ? 'selected' : '' %>>Stretch</option>
+                                            </select> -->
+                                        <br>
+                                        <label>Product</label>
+                                        <select name="prodid" class="form-control" id="prods">
+                                         <!--    <% prods.forEach(function(prod){ %>
+                                                <option value="<%= prod.name %>"><%= prod.name %></option>
+                                            <% }); %> -->
+                                        </select>
+                                        <br>
+                                        <div class="form-group">
+                                            <label>Livestream ID</label>
+                                            <input type="text" class="form-control" name="lsid" value="<%= class_.livestream.id %>">
+                                        </div>
+                                    </div>
+                                        
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="hidden" name="flexcon" value="false">
+                                                <input type="checkbox" name="flexcon" value="true">
+                                                <!-- <%= (class_.flexcon) ? 'checked' : '' %> -->
+                                                Flex Connect Ride
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="hidden" name="encore" value="false">
+                                                <input type="checkbox" name="encore" value="true" >
+                                                <!-- <%= (class_.encore) ? 'checked' : '' %> -->
+                                                Encore Ride
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="hidden" name="emile" value="false">
+                                                <input type="checkbox" name="emile" value="true">
+                                                <!-- <%= (class_.emile) ? 'checked' : '' %> -->
+                                                Extra Mile
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="hidden" name="scenic" value="false">
+                                                <input type="checkbox" name="scenic" value="true">
+                                                <!-- <%= (class_.scenic) ? 'checked' : '' %> -->
+                                                Scenic Ride
+                                            </label>
+                                        </div>
+                                </div>
+                                    <!-- <div class="form-group">
+                                        <label>Livestream ID</label>
+                                        <input type="text" class="form-control" name="lsid">
+                                    </div> -->
+                                    <div class="form-group">
+                                            <button type="submit" class="btn btn-info"><i class="fas fa-cloud-upload-alt"></i> Upload</button>
+                                            <label>Placeholder Image</label>
+                                        </div>
+                                    <div class="form-group">
+                                        <label id="pv" hidden>Preview</label>
+                                        <img id="pvimg" style="max-width:480px;max-height:360px;"/>
+                                             <!-- src="<%= class_.pUrl %> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-lg">Update</button>
+                                    </div>
+                            </form>
                         </div>
-                    </form>
-                </div>
+                    </div> 
+                    <!-- <%- include('obj/footer'); %> -->
+                      
                 </div>
               </div>
             </div>

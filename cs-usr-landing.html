@@ -33,7 +33,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Echelon Admin</div>
+        <div class="sidebar-brand-text mx-3">Echelon Customers Service</div>
       </a>
 
       <!-- Divider -->
@@ -153,7 +153,7 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <h3 class="m-0 font-weight-bold text-primary">Create Instructor</h3>
+            <h3 class="m-0 font-weight-bold text-primary">Support User</h3>
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
@@ -193,69 +193,396 @@
           <div class="row">
               
             <!-- Area Chart -->
-            <div class="col-xl-12 col-lg-12">
+            <div class="col-xl">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Support Users</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">User info</h6>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                    <div class="">
+                    <div class="content centerCC">
                         <div class="row1">
                             <div class="block1">
                                 <h5>First Name:&nbsp;<small class="text-muted"></small></h5>
-                                <h5>Last Name:&nbsp;<small class="text-muted"></small></h5>
-                                <h5>E-Mail:&nbsp;<small class="text-muted"></small></h5>
-                                <h5>Phone Number:&nbsp;<small class="text-muted"></small></h5>
-                                <h5>Address:&nbsp;<small class="text-muted"></small></h5>
+                                <br>
                                 <h5>City:&nbsp;<small class="text-muted"></small></h5>
+                                <br>
                                 <h5>State/Province:&nbsp;<small class="text-muted"></small></h5>
+                                <br>
                                 <h5>Zip/Postal Code:&nbsp;<small class="text-muted"></small></h5>
-                                    <h5>Country:&nbsp;<small class="text-muted"></small></h5>
-                                    <h5>Platform:&nbsp;<small class="text-muted"></small></h5>
-                                    <h5>Purchased From:&nbsp;<small class="text-muted"></small></h5>
+                                <br>
+                                <h5>Purchased From:&nbsp;<small class="text-muted"></small></h5>
+                                
                             </div>
-                                <div class="block1">
-                                    <div class="row" style="margin-top : 5px;">
-                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Set Password</button>
-                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#emailModal">Update E-Mail</button>  
-                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#secModal">Update Security</button>
-                                    </div>
-                                    <div class="row" style="margin-top : 5px;">
+                                <div class="spacer block1">
+                                    <h5>Last Name:&nbsp;<small class="text-muted"></small></h5>
+                                    <br>
+                                    <h5>E-Mail:&nbsp;<small class="text-muted"></small></h5>
+                                    <br>
+                                    <h5>Phone Number:&nbsp;<small class="text-muted"></small></h5>
+                                    <br>
+                                    <h5>Address:&nbsp;<small class="text-muted"></small></h5>
+                                    <br>
+                                    <h5>Country:&nbsp;<small class="text-muted"></small></h5>
+                                    <br>
+                                    <h5>Platform:&nbsp;<small class="text-muted"></small></h5>
+                                </div>
+                                    <br><br><br><br>
+                                    <div class="">
                                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#familyModal">Add Family Member</button>
                                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#primaryModal">Make Primary Account</button>
                                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uinfoModal">Edit Profile</button>
-                                    </div>
-                                </div>
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Set Password</button>
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#emailModal">Update E-Mail</button>  
+                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#secModal">Update Security</button>
+                                   </div>
                             </div>
+                                    <br>
+                                    <div class="centerCC">
+                                        <h5 class="text-info">Not Seeing the right Trial?</h5>
+                                        <a href="/cs/fix90/<%= user._id %>" class="btn btn-primary">Fix 90 days</a>
+                                        <a href="/cs/fix30/<%= user._id %>" class="btn btn-primary">Fix 30 days</a>
+                                    </div>
                         </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Selected Products</h6>
                     
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-pie pt-4 pb-2">
-                      
                   </div>
                 </div>
               </div>
             </div>
-          
+            
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Update Password</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <form action="/cs/setpw/<%= user._id %>" method="POST">
+                                <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" name="pw" required/>
+                                </div>
 
-          <!-- Content Row -->
-          <div class="row">
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="Submit" class="btn btn-primary">Save changes</button>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Update E-Mail</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                        <form action="/cs/setem/<%= user._id %>" method="POST">
+                                            <div class="form-group">
+                                                    <label>E-Mail</label>
+                                                    <input type="email" class="form-control" name="email" required/>
+                                            </div>
 
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="submit" class="btn btn-primary">Save changes</button>
+                                </form>
+                                </div>
+                              </div>
+                            </div>
+                      </div>
+                    
+                    <!-- Manual Sub Block-->
+                      <div class="modal fade" id="mansubModal" tabindex="-1" role="dialog" aria-labelledby="mansubModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Add Manual Subscription</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                      <form action="/cs/mansub/<%= user._id %>" method="POST">
+                                        <div class="form-group">
+                                            <label>Duration (in days)</label>
+                                            <input type="number" class="form-control" name="duration" value="30" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Free Trial (in days)</label>
+                                            <input type="number" class="form-control" name="freetrial" value="0" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                                            <div class="input-group">
+                                              <div class="input-group-addon">$</div>
+                                              <input type="text" class="form-control" id="exampleInputAmount" name="price" placeholder="Amount">
+                                            </div>
+                                          </div>
+                                        <div class="form-group">
+                                            <label>Subscribed to:</label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" id="inlineCheckbox1" value="connect"> Connect
+                                              </label>
+                                              <label class="checkbox-inline">
+                                                <input type="checkbox" id="inlineCheckbox2" value="flex"> Flex/Slim Cycle/Fit Quest Pro
+                                              </label>
+                                              <label class="checkbox-inline">
+                                                <input type="checkbox" id="inlineCheckbox3" value="extraMile"> Extra Mile
+                                              </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="card-element">
+                                                Credit or debit card (Your credit card will not be charged until the time of renewal)
+                                            </label>
+                                            <div id="card-element">
+                                                <!-- A Stripe Element will be inserted here. -->
+                                            </div>
+
+                                            <!-- Used to display form errors. -->
+                                            <div id="card-errors" class="text-danger" role="alert"></div>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                              <input type="checkbox" name="auto-renew"> Auto-Renews
+                                            </label>
+                                          </div>
+
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Add Subscription</button>
+                              </form>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <!-- Manual Sub End -->
+                    
+                      <!-- Begin edit profile -->
+                      <div class="modal fade" id="uinfoModal" tabindex="-1" role="dialog" aria-labelledby="uinfoModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Update User Info</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                      <form action="/cs/edituinfo/<%= user._id %>" method="POST">
+                                          <div class="form-group">
+                                                  <label>First Name</label>
+                                                  <input type="text" class="form-control" name="firstName" value="<%= user.firstName %>" required/>
+                                          </div>
+                                          <div class="form-group">
+                                              <label>Last Name</label>
+                                              <input type="text" class="form-control" name="lastName" value="<%= user.lastName %>" required/>
+                                          </div>
+                                          <div class="form-group">
+                                              <label>Nickname</label>
+                                              <input type="text" class="form-control" name="nickName" value="<%= user.nickName %>" />
+                                          </div>
+                                          <div class="form-group">
+                                              <label>Phone Number</label>
+                                              <input type="text" class="form-control" name="phone" value="<%= user.phone %>" required/>
+                                          </div>
+                                          <div class="form-group">
+                                              <label>Address</label>
+                                              <input type="text" class="form-control" name="address" value="<%= user.address %>" required/>
+                                          </div>
+                                          <div class="form-group">
+                                              <label>City</label>
+                                              <input type="text" class="form-control" name="city" value="<%= user.city %>" required/>
+                                          </div>
+                                          <div class="form-group">
+                                              <label>State/Province</label>
+                                              <input type="text" class="form-control" name="state" value="<%= user.state %>" required/>
+                                          </div>
+                                          <div class="form-group">
+                                              <label>Zip/Postal Code</label>
+                                              <input type="text" class="form-control" name="zip" value="<%= user.zip %>" required/>
+                                          </div>
+                                          <div class="form-group">
+                                              <label>Country</label>
+                                              <input type="text" class="form-control" name="country" value="<%= user.country %>" required/>
+                                          </div>
+
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                              </form>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <!-- END EDIT PROFILE-->
+                    
+                    <div class="modal fade" id="secModal" tabindex="-1" role="dialog" aria-labelledby="secModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Update Security Questions</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                    <form action="/cs/setsec/<%= user._id %>" method="POST">
+                                        <div class="form-group">
+                                                <label>Security Question</label>
+                                                <select class="form-control" name="secQuest" required>
+                                                  <option value="What is the name of the street you grew up on?">What is the name of the street you grew up on?</option>
+                                                  <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+                                                  <option value="What is you grandfather's first name?">What is you grandfather's first name?</option>
+                                                  <option value="Where did you meet your spouse?">Where did you meet your spouse?</option>
+                                                  <option value="What was the make and model of your first car?">What was the make and model of your first car?</option>
+                                                </select>
+                                        </div>
+                                        <div class="form-group">
+                                          <label>Answer</label>
+                                          <input type="text" class="form-control" name="secResp" required/>
+                                      </div>
+
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="submit" class="btn btn-primary">Save changes</button>
+                            </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    <div class="modal fade" id="serialModal" tabindex="-1" role="dialog" aria-labelledby="serialModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Update Serial Number</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                <form action="/cs/serial/add/<%= user._id %>" method="POST">
+                                    <div class="form-group">
+                                            <label>Serial</label>
+                                            <input type="text" class="form-control" name="serial" required />
+                                    </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary">Save changes</button>
+                        </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    
+                    <div class="modal fade" id="familyModal" tabindex="-1" role="dialog" aria-labelledby="familyModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Add Family Member</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                    <form action="/cs/family/add/<%= user._id %>" method="POST">
+                                        <div class="form-group">
+                                          <label>Family Member E-Mail</label>
+                                          <input type="text" class="form-control" name="femail" required/>
+                                      </div>
+
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="submit" class="btn btn-primary">Save changes</button>
+                            </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    <div class="modal fade" id="primaryModal" tabindex="-1" role="dialog" aria-labelledby="primaryModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Family Member</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                                  <form action="/cs/family/prim/<%= user._id %>" method="POST">
+                                  Warning: This will make the current user into the parent account and all other associated family members will become child accounts. Make sure to transfer any subscription information properly.
+
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Make Primary</button>
+                          </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="modal fade" id="updateSub" tabindex="-1" role="dialog" aria-labelledby="updateSub" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Subscription Update</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <h4>Choose an Option <small class="text-muted">When fixing a wrong purchase, make sure to have the customer cancel the incorrect plan through their app store account</small></h4>  
+                          <h5>Flex Plans</h5>
+                          <a href="/cs/add/fm/<%= user._id %>" class="btn btn-primary">Add Flex Monthly</a>
+                          <a href="/cs/add/fb/<%= user._id %>" class="btn btn-primary">Add Flex+Extra Mile Monthly</a>
+                          <a href="/cs/add/fy/<%= user._id %>" class="btn btn-primary">Add Flex Yearly</a>
+                          <br />
+                          <a href="/cs/remove/fm/<%= user._id %>" class="btn btn-primary">Remove Flex Monthly</a>
+                          <a href="/cs/remove/fb/<%= user._id %>" class="btn btn-primary">Remove Flex+Extra Mile Monthly</a>
+                          <a href="/cs/remove/fy/<%= user._id %>" class="btn btn-primary">Remove Flex Yearly</a>
+                          <h5>Connect Plans</h5>
+                          <a href="/cs/add/cm/<%= user._id %>" class="btn btn-primary">Add Connect Monthly</a>
+                          <a href="/cs/add/cb/<%= user._id %>" class="btn btn-primary">Add Connect+Extra Mile Monthly</a>
+                          <a href="/cs/add/cy/<%= user._id %>" class="btn btn-primary">Add Connect 1-Year</a>
+                          <a href="/cs/add/cy/<%= user._id %>" class="btn btn-primary">Add Connect 2-Year</a>
+                          <br />
+                          <a href="/cs/remove/cm/<%= user._id %>" class="btn btn-primary">Remove Connect Monthly</a>
+                          <a href="/cs/remove/cb/<%= user._id %>" class="btn btn-primary">Remove Connect+Extra Mile Monthly</a>
+                          <a href="/cs/remove/cy/<%= user._id %>" class="btn btn-primary">Remove Connect 1-Year</a>
+                          <a href="/cs/remove/cy/<%= user._id %>" class="btn btn-primary">Remove Connect 2-Year</a>
+                          <h5>Just Extra Mile</h5>
+                          <a href="/cs/add/em/<%= user._id %>" class="btn btn-primary">Add Extra Mile Monthly</a>
+                          <br />
+                          <a href="/cs/remove/em/<%= user._id %>" class="btn btn-primary">Remove Extra Mile Monthly</a>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    
+            
+            <div class="row">
             <!-- Content Column -->
             <div class="col-lg-6 mb-4">
               <!-- Project Card Example -->
@@ -264,7 +591,22 @@
                   <h6 class="m-0 font-weight-bold text-primary">Family Members</h6>
                 </div>
                 <div class="card-body">
-
+                      <div class="well">
+                          <table class="table table-stripped table-hover">
+                              <thead>
+                                  <tr>
+                                      <th>Name</th>
+                                      <th>Email</th>
+                                      <th>Account Type</th>
+                                  </tr>
+                                 <!-- <tbody>
+                                      <% family.forEach(function(usr){ %>
+                                          <%- include('obj/cs-family', {user : usr}); %>
+                                      <% }) %>
+                                  </tbody> -->
+                              </thead>
+                          </table>
+                      </div>
                 </div>
               </div>
             </div>
@@ -273,17 +615,31 @@
               <!-- Illustrations -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Selected Products</h6>
                 </div>
                 <div class="card-body">
-                  <div class="text-center">
-                      
+                  <div class="well">
+                      <table class="table table-stripped table-hover">
+                          <thead>
+                              <tr>
+                                  <th>Product</th>
+                              </tr>
+                             <!-- <tbody>
+                                  <% user.products.forEach(function(prod){ %>
+                                      <%- include('obj/cs-prod', {user : prod}); %>
+                                  <% }) %>
+                              </tbody> -->
+                          </thead>
+                      </table>
                   </div>
                 </div>
               </div>
             </div>
+            
+          </div>
         </div>
-
+                  
+        </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->

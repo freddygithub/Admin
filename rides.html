@@ -225,7 +225,34 @@
                                             <th>Name</th>
                                             <th>Instructor</th>
                                             <th>Total Rides</th>
+                                            <th>Action</th>
                                         </tr>
+                                            <tr>
+                                                <td>junior Junior</td>
+                                                <td>instructor456</td>
+                                                <td>0</td>
+                                                <td> 
+                                                  <a href="edit-ondemand.html"  class="btn btn-info btn-circle btn-sm">
+                                                    <i class="fas fa-edit whitening"></i>
+                                                  </a>
+                                                  <a class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#squarespaceModal">
+                                                    <i class="fas fa-trash whitening"></i>
+                                                  </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bob Junior</td>
+                                                <td>instructor1</td>
+                                                <td>123123</td>
+                                                <td> 
+                                                  <a href="edit-class.html"  class="btn btn-info btn-circle btn-sm">
+                                                    <i class="fas fa-edit whitening"></i>
+                                                  </a>
+                                                  <a class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#squarespaceModal">
+                                                    <i class="fas fa-trash whitening"></i>
+                                                  </a>
+                                                </td>
+                                            </tr>
                                         <!-- <tbody>
                                             <% rides.forEach(function(ride) { %>
                                                 <%- include('obj/ride', {ride : ride}); %>
@@ -270,15 +297,32 @@
                                             <th>Name</th>
                                             <th>Instructor</th>
                                             <th>Total Rides</th>
+                                            <th>Action</th>
                                         </tr>
                                             <tr>
-                                                <td>
-                                                    hello
+                                                <td>junior Junior</td>
+                                                <td>instructor456</td>
+                                                <td>0</td>
+                                                <td> 
+                                                  <a href="edit-class.html"  class="btn btn-info btn-circle btn-sm">
+                                                    <i class="fas fa-edit whitening"></i>
+                                                  </a>
+                                                  <a class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#squarespaceModal">
+                                                    <i class="fas fa-trash whitening"></i>
+                                                  </a>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>
-                                                    hello
+                                                <td>Bob Junior</td>
+                                                <td>instructor1</td>
+                                                <td>123123</td>
+                                                <td> 
+                                                  <a href="edit-class.html"  class="btn btn-info btn-circle btn-sm">
+                                                    <i class="fas fa-edit whitening"></i>
+                                                  </a>
+                                                  <a class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#squarespaceModal">
+                                                    <i class="fas fa-trash whitening"></i>
+                                                  </a>
                                                 </td>
                                             </tr>
                                         <!-- <tbody>
@@ -290,6 +334,34 @@
                                 </table>
                             </div>
                         <!-- <%- include('obj/footer') %> -->
+                      
+                      
+                      <!-- line modal for delete -->
+                        <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="lineModalLabel">Warning <i class="fas fa-exclamation-triangle"></i></h3>
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- content goes here -->
+                                    <label for="exampleInputEmail1">Are you sure you want to permanently delete [ClassName] this class?</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                                        <div class="btn-group btn-delete hidden" role="group">
+                                            <button type="button" class="btn btn-info" data-dismiss="modal"  role="button">Close</button>
+                                            
+                                            <button type="button" id="delImage" class="btn btn-danger" data-dismiss="modal" role="button">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      
                       
                 </div>
               </div>

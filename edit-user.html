@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Echelon Admin</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Echelon Admin</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Actions
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->        
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Create</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="create-class.html">Live Class</a>
+            <a class="collapse-item" href="create-ondemand.html">On Demand</a>
+            <a class="collapse-item" href="create-instructor.html">Instructor</a>
+            <a class="collapse-item" href="create-prod.html">Product</a>
+            <a class="collapse-item" href="create-categories.html">Category</a>
+            <a class="collapse-item" href="create-plans.html">Plan</a>
+          </div>
+        </div>
+      </li>        
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <i class="fas fa-share-square"></i>
+          <span>Send</span>
+        </a>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Send Actions:</h6>
+            <a class="collapse-item" href="global-apn.html">Global Notification</a>
+            <a class="collapse-item" href="#">User Notification [SOON] </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Manage</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Manage Actions:</h6>
+            <a class="collapse-item" href="users.html">Users</a>
+            <a class="collapse-item" href="plans.html">Subscriptions</a>
+            <a class="collapse-item" href="rides.html">Rides</a>
+            <a class="collapse-item" href="filters.html">Filters</a>
+            <a class="collapse-item" href="instructors.html">Instructors</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Addons
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link" href="reports.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Reports</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="class.html">
+          <i class="fas fa-calendar-day"></i>
+          <span>Classes</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="categories.html">
+          <i class="fas fa-paperclip"></i>
+          <span>Categories</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="products.html">
+          <i class="fas fa-box-open"></i>
+          <span>Products</span></a>
+      </li>
+        
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+      
+      
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <h3 class="m-0 font-weight-bold text-primary"><i class="fas fa-user fa-sm fa-fw"></i>Edit User</h3>
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Valerie Luna</span>
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+    <!-- Content Row -->
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="card shadow mb-4">
+                    
+            <div class="container bootstrap snippet">
+                <div class="row">
+                    <br>
+                </div>
+                <div class="row">
+                    <!--/col-3-->
+                    <div class="col-sm-9">
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="home">
+                             <!--   <div class="col-sm-6 col-sm-offset-3">
+                                    <% if (!user) { %>
+                                        <div class="alert alert-danger">Error: User not found!</div>
+                                    <% } else { %>
+                                        <% if (sMsg.length > 0) { %> <div class="alert alert-success"><%= sMsg %
+                                </div><% } %> -->
+                            
+                              <form class="form-horizontal" action="/edit/user/<%= user._id %>" method="POST">
+                                <fieldset>
+                                  <div class="container centerCC">
+                                    <div class="row1">
+                                        <div class="block1">
+                                            <div class="form-group">
+                                                <label>First Name</label>
+                                                <input type="text" class="form-control" name="firstName" value="<%= user.firstName %>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="text" class="form-control" name="email" value="<%= user.local.email %>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Address</label>
+                                                <input type="text" class="form-control" name="IGNORE_ME" value="<%= user.address %>" disabled>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Gender</label>
+                                                <input type="text" class="form-control" name="IGNORE_ME" value="<%= user.gender %>" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="block1 spacer">
+                                            <div class="form-group">
+                                                <label>Last Name</label>
+                                                <input type="text" class="form-control" name="lastName" value="<%= user.lastName %>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>City</label>
+                                                <input type="text" class="form-control" name="IGNORE_ME" value="<%= user.city %>" disabled>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>State</label>
+                                                <input type="text" class="form-control" name="IGNORE_ME" value="<%= user.state %>" disabled>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Country</label>
+                                                <input type="text" class="form-control" name="IGNORE_ME" value="<%= user.country %>" disabled>
+                                            </div>
+                                                </div>
+                                              </div>
+                                          </div>
+                                        <br>
+                                  <div class="container centerCC">
+                                    <div class="row1">
+                                        <div class="block2">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="hidden" name="canUseAdmin" value="false">
+                                                    <input type="checkbox" name="canUseAdmin" value="true">
+                                                    Use Echelon Admin Panel
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="hidden" name="canModifyClass" value="false">
+                                                    <input type="checkbox" name="canModifyClass" value="true">
+                                                    Can Modify Existing Live Classes
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="hidden" name="canCreateOnDemand" value="false">
+                                                    <input type="checkbox" name="canCreateOnDemand" value="true">
+                                                    Can Create New On Demand Classes
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="acode" value="VALID">
+                                                Full Access
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="acode" value="VALID">
+                                                Promo Access
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="acode" value="VALID">
+                                                14-Day Full Access
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="acode" value="VALID">
+                                                30-Day Full Access
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="acode" value="VALID">
+                                                60-Day Full Access
+                                            </label>
+                                        </div>
+                                        </div>
+                                        <div class="block2 spacer">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="hidden" name="canCreateClass" value="false">
+                                                    <input type="checkbox" name="canCreateClass" value="true">
+                                                    Create New Live Classes
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="hidden" name="canModifyOnDemand" value="false">
+                                                    <input type="checkbox" name="canModifyOnDemand" value="true">
+                                                    Can Modify Existing On Demand Classes
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="hidden" name="canModifyUsers" value="false">
+                                                    <input type="checkbox" name="canModifyUsers" value="true">
+                                                    Can Modify User Permissions
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="hidden" name="canCreateInstructor" value="false">
+                                                    <input type="checkbox" name="canCreateInstructor" value="true">
+                                                    Can Create New Instructors
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                    <label>
+                                                        <input type="hidden" name="canModifyInstructor" value="false">
+                                                        <input type="checkbox" name="canModifyInstructor" value="true">
+                                                        Can Modify Existing Instructors
+                                                    </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                    <label>
+                                                        <input type="hidden" name="canDeleteItems" value="false">
+                                                        <input type="checkbox" name="canDeleteItems" value="true">
+                                                        Can Delete Existing Items (Users, Live Classes, Instructors, etc)
+                                                    </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                    <label>
+                                                        <input type="hidden" name="canCreateCategory" value="false">
+                                                        <input type="checkbox" name="canCreateCategory" value="true">
+                                                        Can Create New Category
+                                                    </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                    <label>
+                                                        <input type="hidden" name="canModifyCategory" value="false">
+                                                        <input type="checkbox" name="canModifyCategory" value="true">
+                                                        Can Modify Existing Categories
+                                                    </label>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  
+                                    <br><hr><br>
+                                    <div class="form-group">
+                                        <div class="col-lg-10 col-lg-offset-2">
+                                            <button type="submit" class="btn btn-primary btn-lg">Update</button>
+                                        </div>
+                                    </div>
+                                  </fieldset>
+                            </form>
+                          <hr>
+                         </div>
+                          <!--/tab-pane-->
+                        </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+       </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span></span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="js/demo/chart-bar-demo.js"></script>
+  <script type="text/javascript">
+    document.getElementById("pimg").onchange = function () {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            document.getElementById("pvimg").src = e.target.result;
+        };
+
+        reader.readAsDataURL(this.files[0]);
+
+        document.getElementById("pv").hidden = false;
+    };
+      
+    $('#product').selectize({
+        plugins:['remove_button']
+    });
+</script>
+
+</body>
+
+</html>

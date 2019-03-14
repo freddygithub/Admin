@@ -153,7 +153,7 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <h3 class="m-0 font-weight-bold text-primary">Create Instructor</h3>
+            <h3 class="m-0 font-weight-bold text-primary">Edit Category </h3>
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
@@ -189,37 +189,67 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-        <!-- Content Row -->
+                      <!-- Content Row -->
           <div class="row">
-
-            <div class="col-xl-8 col-lg-7">
-
+            <div class="col-xl-7 col-lg-7">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h5 class="m-0 font-weight-bold text-primary">Instructor info: </h5>
+                  <h5 class="m-0 font-weight-bold text-primary">Category Info: </h5>
                 </div>
                 <div class="card-body">
-                  <div class="chart-bar">
-                    <div class="col-sm-6 col-sm-offset-3">
-                    <form class="form-horizontal" action="/create/instructor" method="POST" enctype="multipart/form-data">
-                        <fieldset>
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" name="iname">
+                  <div class="">
+                    <div class="container">
+                        
+                        <!-- views/edit-category.ejs -->
+                        <!-- <%- include('obj/header',{title: 'Echelon - Edit Category'}); %> -->
+                        <!-- <%- include('obj/navbar', {page:''}); %> -->
+
+                        <!-- BUILD OUT PAGE HERE -->
+                        <div class="container">
+                            <div class="col-sm-8 col-sm-offset-3">
+                                <!-- <% if (sMsg.length > 0) { %>
+                                <div class="alert alert-success"><%= sMsg %></div>
+                                <% } %> -->
+                                <form class="form-horizontal" action="/edit/category/<%= category._id %>" method="POST">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input type="text" class="form-control" name="cname" value="<%= category.name %>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Sort Order</label>
+                                            <input type="Number" class="form-control" name="sortorder" value="<%= category.sortOrder %>">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="hidden" name="isconn" value="false">
+                                                    <input type="checkbox" name="isconn" value="true">
+                                                    <!-- <%= (category.isconn) ? 'checked' : '' %> -->
+                                                    Connect Category?
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="hidden" name="isgwee" value="false">
+                                                    <input type="checkbox" name="isgwee" value="true">
+                                                           <!-- <%= (category.isgwee) ? 'checked' : '' %> -->
+                                                    Gwee Gym Category?
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <div class="form-group">
+                                     <button type="submit" class="btn btn-primary btn-lg">Update</button>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                    <button type="submit" class="btn btn-info"><i class="fas fa-cloud-upload-alt"></i> Upload</button>
-                                    <label>Profile Image</label>
-                            </div>
-                            <div class="form-group">
-                                <label id="pv" hidden>Preview</label>
-                                <img id="pvimg" style="max-width:480px;max-height:360px;" />
-                            </div>
-                        </fieldset>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-success btn-lg">Create</button>
-                        </div>
-                    </form>
+                        </div> 
+
+                        <!-- <%- include('obj/footer'); %> -->
+                        
                 </div>
                 </div>
               </div>
