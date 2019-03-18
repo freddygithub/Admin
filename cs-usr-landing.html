@@ -26,14 +26,12 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-light accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Echelon Customers Service</div>
+
+        <div class="sidebar-brand-text mx-3">Echelon Admin</div>
       </a>
 
       <!-- Divider -->
@@ -153,7 +151,8 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <h3 class="m-0 font-weight-bold text-primary">Support User</h3>
+            <h5 class="m-0 font-weight-bold text-primary">Support User</h5>
+            
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
@@ -195,55 +194,71 @@
             <!-- Area Chart -->
             <div class="col-xl">
               <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">User info</h6>
+                <div class="card-header py-3">
+                    
+                  <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbarL">
+                    <div class="input-group">
+                      <input type="text" class="form-control bg-light border-3 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                    
+                  <h6 class="m-0 font-weight-bold text-primary"></h6>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                    <div class="content centerCC">
+                    <div class="content">
                         <div class="row1">
                             <div class="block1">
-                                <h5>First Name:&nbsp;<small class="text-muted"></small></h5>
-                                <br>
-                                <h5>City:&nbsp;<small class="text-muted"></small></h5>
-                                <br>
-                                <h5>State/Province:&nbsp;<small class="text-muted"></small></h5>
-                                <br>
-                                <h5>Zip/Postal Code:&nbsp;<small class="text-muted"></small></h5>
-                                <br>
-                                <h5>Purchased From:&nbsp;<small class="text-muted"></small></h5>
-                                
-                            </div>
-                                <div class="spacer block1">
-                                    <h5>Last Name:&nbsp;<small class="text-muted"></small></h5>
-                                    <br>
-                                    <h5>E-Mail:&nbsp;<small class="text-muted"></small></h5>
-                                    <br>
-                                    <h5>Phone Number:&nbsp;<small class="text-muted"></small></h5>
-                                    <br>
-                                    <h5>Address:&nbsp;<small class="text-muted"></small></h5>
-                                    <br>
-                                    <h5>Country:&nbsp;<small class="text-muted"></small></h5>
-                                    <br>
-                                    <h5>Platform:&nbsp;<small class="text-muted"></small></h5>
-                                </div>
-                                    <br><br><br><br>
-                                    <div class="">
-                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#familyModal">Add Family Member</button>
-                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#primaryModal">Make Primary Account</button>
-                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uinfoModal">Edit Profile</button>
-                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Set Password</button>
-                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#emailModal">Update E-Mail</button>  
-                                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#secModal">Update Security</button>
+                                    <div>
+                                      <h5>Actions: </h5> <hr>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#familyModal">Add Family Member</button>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#primaryModal">Make Primary Account</button>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#uinfoModal">Edit Profile</button>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#exampleModal">Set Password</button>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#emailModal">Update E-Mail</button> 
+                                        <div></div>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#secModal">Update Security</button>
                                    </div>
                             </div>
+                            <div class="spacer block1" style="left: 900px;">
+                                <br><hr>
+                                <h6>First Name:&nbsp;<small class="text-muted"></small></h6>
+                                <br>
+                                <h6>City:&nbsp;<small class="text-muted"></small></h6>
+                                <br>
+                                <h6>State/Province:&nbsp;<small class="text-muted"></small></h6>
+                                <br>
+                                <h6>Zip/Postal Code:&nbsp;<small class="text-muted"></small></h6>
+                                <br>
+                                <h6>Purchased From:&nbsp;<small class="text-muted"></small></h6>
+                            </div>
+                                <div class="spacer block1">
+                                    <h5>Preview: </h5>
+                                    <hr>
+                                    <h6>Last Name:&nbsp;<small class="text-muted"></small></h6>
                                     <br>
+                                    <h6>E-Mail:&nbsp;<small class="text-muted"></small></h6>
+                                    <br>
+                                    <h6>Phone Number:&nbsp;<small class="text-muted"></small></h6>
+                                    <br>
+                                    <h6>Address:&nbsp;<small class="text-muted"></small></h6>
+                                    <br>
+                                    <h6>Country:&nbsp;<small class="text-muted"></small></h6>
+                                    <br>
+                                    <h6>Platform:&nbsp;<small class="text-muted"></small></h6>
+                                </div>
+                            </div>
+                                 <!--   <br><br><br>
                                     <div class="centerCC">
                                         <h5 class="text-info">Not Seeing the right Trial?</h5>
                                         <a href="/cs/fix90/<%= user._id %>" class="btn btn-primary">Fix 90 days</a>
                                         <a href="/cs/fix30/<%= user._id %>" class="btn btn-primary">Fix 30 days</a>
-                                    </div>
+                                    </div> -->
                         </div>
                     
                   </div>
@@ -507,10 +522,12 @@
                                           <input type="text" class="form-control" name="femail" required/>
                                       </div>
 
-                            </div>
+                            
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                               <button type="submit" class="btn btn-primary">Save changes</button>
+                        
+                            </div>
                             </form>
                             </div>
                           </div>
@@ -527,14 +544,12 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                                  <form action="/cs/family/prim/<%= user._id %>" method="POST">
                                   Warning: This will make the current user into the parent account and all other associated family members will become child accounts. Make sure to transfer any subscription information properly.
 
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Make Primary</button>
-                          </form>
                           </div>
                         </div>
                       </div>

@@ -47,7 +47,7 @@
 }
 
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -59,7 +59,7 @@ article,aside,figcaption,figure,footer,header,hgroup,main,nav,section {
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -153,13 +153,13 @@ sup {
 }
 
 a {
-  color: #4e73df;
+  color: lightslategrey;
   text-decoration: none;
   background-color: transparent;
 }
 
-a:hover {
-  color: #c2071e;
+a:hover, i:hover{
+  color: #4e73df;
   text-decoration: underline;
 }
 
@@ -2617,7 +2617,7 @@ textarea.form-control {
   background-color: transparent;
   border: 1px solid transparent;
   padding: .375rem .75rem;
-  font-size: 1rem;
+  font-size: 15px;
   line-height: 1.5;
   border-radius: .35rem;
   -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
@@ -2651,17 +2651,15 @@ textarea.form-control {
 a.btn.disabled,fieldset:disabled a.btn {
   pointer-events: none;
 }
-
 .btn-primary {
   color: #fff;
-  background-color: #c2071e;
-  border-color: white;
+  background-color: #4e73df;
+  border-color: #4e73df;
 }
-
 .btn-primary:hover {
   color: #fff;
-  background-color: lightcoral;
-  border-color: lightcoral;
+  background-color: #2e59d9;
+  border-color: #2653d4;
 }
 
 .btn-primary.focus,.btn-primary:focus {
@@ -4373,6 +4371,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+    
 }
 
 .navbar-brand {
@@ -4383,6 +4382,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+    
 }
 
 .navbar-brand:focus,.navbar-brand:hover {
@@ -4400,6 +4400,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+    
 }
 
 .navbar-nav .nav-link {
@@ -10483,7 +10484,7 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
 }
 
 .text-primary {
-  color: #c2071e!important;
+  color: #6e707e;
 }
 
 a.text-primary:focus,a.text-primary:hover {
@@ -10804,7 +10805,7 @@ a:focus {
 }
 
 .bg-gradient-primary {
-  background-color: #282828;
+  background-color: whitesmoke;
   background-size: cover;
 }
 
@@ -11011,7 +11012,7 @@ a:focus {
   border: 0;
   font-weight: 900;
   content: '\f105';
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Lato', sans-serif;
 }
 
 .sidebar .nav-item.dropdown.show .dropdown-toggle::after,.topbar .nav-item.dropdown.show .dropdown-toggle::after {
@@ -11186,7 +11187,11 @@ a:focus {
 .sidebar {
   width: 6.5rem;
   min-height: 100vh;
-  color: red;
+  -moz-box-shadow:0 0 5px 0 black;
+  -webkit-box-shadow:0 0 5px 0 black;
+  box-shadow: 0  0px 5px 0px black;
+  position: relative;
+  z-index: 5;
 }
 
 .sidebar .nav-item {
@@ -12239,8 +12244,13 @@ body.sidebar-toggled footer.sticky-footer {
 .searchbar {
   display: inline-block;
   float: right;
+  width: 500px;
 }
-
+.searchbarL {
+  display: inline-block;
+  float: left;
+  width: 900px;
+}
 .button {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
@@ -12284,6 +12294,10 @@ body.sidebar-toggled footer.sticky-footer {
 .spacer {
   float: right;
 }
+.spacer {
+  float: right;
+    margin-right: 100px;
+}
 .centerCC{
   width: 800px; 
   margin: 0 auto;
@@ -12315,10 +12329,6 @@ body.sidebar-toggled footer.sticky-footer {
     display: inline-block;
 }
 .shortcuts{
-    color: white;
-}
-.a:hover{
-    color: white;
 }
 .checked {
   color: orange;
@@ -12340,10 +12350,6 @@ input[type='file'] {
 .whitening{
     color: white;
 }
-.modal{
-
-}
-
 .link-spanner{
   position:absolute; 
   width:100%;
@@ -12352,3 +12358,10 @@ input[type='file'] {
   left: 0;
   z-index: 1;
 } 
+.shortcutText{
+    color: lightslategrey;
+}
+.master{
+    width: 200px;
+    margin-bottom: 10px;
+}

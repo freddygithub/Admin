@@ -17,7 +17,6 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -26,13 +25,10 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-light accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
-        </div>
         <div class="sidebar-brand-text mx-3">Echelon Admin</div>
       </a>
 
@@ -144,7 +140,9 @@
 
     </ul>
     <!-- End of Sidebar -->
-
+      
+    <div class="sidebar2" ></div>
+      
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
@@ -153,7 +151,8 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <h3 class="m-0 font-weight-bold text-primary">Dashboard</h3>
+            <h5 class="m-0 font-weight-bold text-primary">Dashboard</h5>
+            
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
@@ -211,205 +210,102 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          </div>
 
           <!-- Content Row -->
           <div class="row">
               
-            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body shortcutText">
+                  <div class="align-items-center">
+                        <a class="shortcuts card-body" href="categories.html">
+                            <span class="link-spanner"></span>
+                            <h4>Categories <i class="fa fa-paperclip"></i></h4> 
+                        </a> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body shortcutText">
+                  <div class="align-items-center">
+                        <a class="shortcuts card-body" href="reports.html">
+                            <span class="link-spanner"></span>
+                            <h4>Reports <i class="fas fa-address-book"></i></h4>
+                        </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">New Users (Monthly)</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">5,902</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x"></i>
-                    </div>
+                  <div class="align-items-center">
+                        <a class="shortcuts card-body" href="instructors.html">
+                            <span class="link-spanner"></span>
+                         <h4>Instructor <i class="fas fa-chalkboard-teacher"></i></h4>
+                        </a>
                   </div>
                 </div>
               </div>
             </div>
-              
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Rides (Weekly)</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">23,423</div>
-                    </div>
-                    <div class="col-auto">
-                      <span class="fa fa-bicycle fa-2x"></span>
-                    </div>
+                  <div class="align-items-center">
+                        <a class="shortcuts card-body" href="plans.html">
+                            <span class="link-spanner"></span>
+                           <h4>Subscriptions <i class="fas fa-clipboard-list"></i></h4>
+                        </a>
                   </div>
                 </div>
               </div>
             </div>
-              
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Users (ToDate)</div>
-                      <div class="row no-gutters align-items-center">
-                        <div class="col-auto">
-                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">210,274</div>
-                        </div>
-                        <div class="col">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-users fa-2x"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pending Requests Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">App reviews</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">1,538</div>
-                    </div>
-                    <div class="col-auto">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-              
-              
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-danger bg-danger shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="categories.html">
-                            <span class="link-spanner"></span>
-                            Categories
-                        </a>
-                    <div class="col-auto whitening">
-                      <i class="fa fa-paperclip"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info bg-info shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="reports.html" style="">
-                            <span class="link-spanner"></span>
-                            Reports
-                        </a>
-                    <div class="col-auto whitening">
-                      <i class="fas fa-address-book"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary bg-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="instructors.html">
-                            <span class="link-spanner"></span>
-                         Instructor
-                        </a>
-                    <div class="col-auto whitening">
-                      <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-secondary bg-secondary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="plans.html">
-                            <span class="link-spanner"></span>
-                           Subscriptions
-                        </a>
-                    <div class="col-auto whitening">
-                      <i class="fas fa-clipboard-list"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-warning bg-warning shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
+                  <div class="align-items-center">
                         <a class="shortcuts card-body" href="create-class.html">
                             <span class="link-spanner"></span>
-                                Create Class
+                                <h4>Create Class <i class="fas fa-calendar-day"></i></h4>
                         </a>
-                    <div class="col-auto whitening">
-                      <i class="fas fa-calendar-day"></i>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-success bg-success shadow h-100 py-2">
+              <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
-                  <div class="row no-gutters align-items-center">
+                  <div class="align-items-center">
                         <a class="shortcuts card-body" href="create-plans.html" style="">
                             <span class="link-spanner"></span>
-                             Create Plan
+                             <h4>Create Plan <i class="fas fa-address-book"></i></h4>
                         </a>
-                    <div class="col-auto whitening">
-                      <i class="fas fa-address-book"></i>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-danger bg-danger shadow h-100 py-2">
+              <div class="card border-left-danger shadow h-100 py-2">
                 <div class="card-body">
-                  <div class="row no-gutters align-items-center">
+                  <div class="align-items-center">
                         <a class="shortcuts card-body" href="rides.html">
-                            <span class="link-spanner"></span> Rides
+                            <span class="link-spanner"></span> 
+                            <h4>Rides <span class="fa fa-bicycle"></span></h4>
                         </a>
-                    <div class="col-auto whitening">
-                      <span class="fa fa-bicycle"></span> 
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info bg-info shadow h-100 py-2">
+              <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
-                  <div class="row no-gutters align-items-center">
+                  <div class="align-items-center">
                         <a class="shortcuts card-body" href="users.html">
                             <span class="link-spanner"></span>
-                            Users
+                            <h4>Users <i class="fas fa-users"></i></h4>
                         </a>
-                    <div class="col-auto whitening">
-                        <i class="fas fa-users"></i>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -437,6 +333,7 @@
                       </form>
                         <button class="collapsible ddb dropdownButton" id="collapsibleC"><i class="far fa-caret-square-down"></i></button>
                       <h5 class="m-0 font-weight-bold text-primary">New Users</h5>
+                      <p>New members information and search</p>
                     </div>
                     <div class="">
 
@@ -609,6 +506,83 @@
               </div>
             <!-- end new user row -->
               
+                          <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">New Users (Monthly)</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">5,902</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Rides (Weekly)</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">23,423</div>
+                    </div>
+                    <div class="col-auto">
+                      <span class="fa fa-bicycle fa-2x"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Users (ToDate)</div>
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">210,274</div>
+                        </div>
+                        <div class="col">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-users fa-2x"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">App reviews</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">1,538</div>
+                    </div>
+                    <div class="col-auto">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+              
             <!-- Area Chart -->
             <div class="col-xl-8 col-lg-7">
               <div class="card shadow mb-4">
@@ -675,88 +649,7 @@
                 <div class="">
                     <div class="container centerCC">
                         <div class="">
-                            <div class="row1">
-                                <div class="block1">
-                                    <br>
-                                    <div class="col-lg">
-                                      <div class="card bg-danger text-white shadow">
-                                            <a class="shortcuts card-body" href="rides.html">
-                                              <span class="fa fa-bicycle"></span> Rides
-                                            </a>
-                                      </div>
-                                    </div>
-                                    <br>
-                                    <div class="col-lg">
-                                      <div class="card bg-success text-white shadow">
-                                            <a class="shortcuts card-body" href="users.html">
-                                              <i class="fas fa-users"></i> Users
-                                            </a>
-                                      </div>
-                                    </div>
-                                    <br>
-                                    <div class="col-lg">
-                                      <div class="card bg-warning text-white shadow">
-                                            <a class="shortcuts card-body" href="instructors.html">
-                                              <i class="fas fa-chalkboard-teacher"></i> Instructors
-                                            </a>
-                                      </div>
-                                    </div>
-
-                                </div>
-                                <div class="block1 spacer">
-                                    <br>
-                                    <div class="col-lg">
-                                      <div class="card bg-success text-white shadow">
-                                            <a class="shortcuts card-body" href="create-class.html">
-                                              <i class="fas fa-calendar-day"></i> Create Class
-                                            </a>
-                                      </div>
-                                    </div>
-                                    <br>
-                                    <div class="col-lg">
-                                      <div class="card bg-warning text-white shadow">
-                                            <a class="shortcuts card-body" href="create-plans.html">
-                                              <i class="fas fa-address-book"></i> Create Plan
-                                            </a>
-                                      </div>
-                                    </div>
-                                    <br>
-                                    <div class="col-lg mb-4">
-                                      <div class="card bg-secondary text-white shadow">
-                                            <a class="shortcuts card-body" href="plans.html">
-                                              <i class="fas fa-clipboard-list"></i> Subscriptions
-                                            </a>
-                                      </div>
-                                    </div>
-                                </div>
-                                <div class="block1 spacer">
-                                    <br>
-                                    <div class="col-lg">
-                                      <div class="card bg-primary text-white shadow">
-                                            <a class="shortcuts card-body" href="filters.html">
-                                              <i class="fa fa-paperclip"></i> Filters
-                                            </a>
-                                      </div>
-                                    </div>
-                                    <br>
-                                    <div class="col-lg">
-                                      <div class="card bg-info text-white shadow">
-                                            <a class="shortcuts card-body" href="reports.html">
-                                              <i class="fas fa-address-book"></i> Reports
-                                            </a>
-                                      </div>
-                                    </div>
-                                    <br>
-                                    <div class="col-lg mb-4">
-                                      <div class="card bg-danger text-white shadow">
-                                            <a class="shortcuts card-body" href="categories.html">
-                                              <i class="fa fa-paperclip"></i> Categories
-                                            </a>
-                                      </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
+                            
                         </div>
                     </div>
               </div>
@@ -825,7 +718,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.js"></script>
+  <script src="js/sb-admin-3.js"></script>
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
