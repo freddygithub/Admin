@@ -193,10 +193,6 @@
                 
               <div class="card shadow mb-4">
                   
-                <div class="card-header py-3">
-                  <h5 class="m-0 font-weight-bold text-primary">Class info: </h5>
-                </div>
-                  
                 <div class="card-body">
                   <div class="">
 
@@ -212,7 +208,7 @@
                             <% } %> -->
                             <form class="form-horizontal" action="/create/ondemand" method="POST" enctype="multipart/form-data">
                                 <div class="row1">
-                                    <div class="block1">
+                                    <div class="block1 extendInput">
                                         <label>Name</label>
                                         <input type="text" class="form-control" name="oname">
                                         <br>
@@ -236,7 +232,7 @@
                                             <% }); %> -->
                                         </select>
                                     </div>
-                                    <div class="block1 spacer">
+                                    <div class="block1 spacer extendInput">
                                         <label>Sort Order</label>
                                         <input type="Number" class="form-control" name="sortorder">
                                         <br>

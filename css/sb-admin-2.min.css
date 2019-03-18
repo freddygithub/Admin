@@ -158,7 +158,7 @@ a {
   background-color: transparent;
 }
 
-a:hover, i:hover{
+a:hover{
   color: #4e73df;
   text-decoration: underline;
 }
@@ -12300,7 +12300,7 @@ body.sidebar-toggled footer.sticky-footer {
 .centerCC{
   width: 800px; 
   margin: 0 auto;
-  padding: 0px 100px;  
+  padding: 0px 0px;  
 }
 .centerDC{
   width: 800px; 
@@ -12334,6 +12334,7 @@ body.sidebar-toggled footer.sticky-footer {
 }
 .export{
     font-size: 12px;
+    width: 180px;
 }
 input[type='file'] {
   color: transparent;
@@ -12366,4 +12367,12 @@ input[type='file'] {
 }
 .extendInput{
     width: 300px;
+}
+
+.inputHover:hover{
+  color: #4e73df;
+  text-decoration: underline;
+}
+.userLandingText{
+    margin-bottom: 15px;
 }

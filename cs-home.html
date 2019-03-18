@@ -31,7 +31,6 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
         </div>
         <div class="sidebar-brand-text mx-3">Echelon Customer Service</div>
       </a>
@@ -41,8 +40,8 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+        <a class="nav-link" href="cs-home.html">
+          <i class="fas fa-home"></i>
           <span>Home</span></a>
       </li>
 
@@ -153,7 +152,7 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <h3 class="m-0 font-weight-bold text-primary">Welcome to the Customer Service Portal</h3>
+            <h3 class="m-0 font-weight-bold text-primary">Welcome to the Customer Service Portal, [username]</h3>
             
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -212,136 +211,186 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          </div>
-
           <!-- Content Row -->
-          <div class="row">
-                          
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-danger bg-danger shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="categories.html">
-                            <span class="link-spanner"></span>
-                            Categories
-                        </a>
-                    <div class="col-auto whitening">
-                      <i class="fa fa-paperclip"></i>
-                    </div>
+            
+             <!--user-pane
+          <div class="row">          
+            <div class="col-xl-12">
+                  <div class="card shadow mb-4">
+                    <div class="container bootstrap snippet">
+                            <br>
+                        <div class="row">
+                            <div class="col-sm-2">
+                              <div class="text-center">
+                                <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar" style="width: 200px;">
+                              </div>
+                              <br>
+                            </div>
+                            
+                            <div class="col-sm-9">
+                              <div class="tab-content">
+                                <div class="tab-pane active" id="home">
+                                      <form class="form" action="##" method="post" id="registrationForm">
+                                          <div class="form-group">
+                                              <div class="col-xs-6">
+                                                  <label for="first_name"><h4>Username: </h4></label>
+                                              </div>
+                                          </div>
+                                          <div class="form-group">
+                                              <ul class="list-group">
+                                                <li class="list-group-item text-muted">Activity </li>
+                                              </ul> 
+                                          </div>
+                                    </form>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info bg-info shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="reports.html" style="">
-                            <span class="link-spanner"></span>
-                            Reports
-                        </a>
-                    <div class="col-auto whitening">
-                      <i class="fas fa-address-book"></i>
+             -->
+               </div>
+              
+            <!-- Area Chart -->
+            <div class="col-xl">
+              <div class="card shadow mb-2">
+                <div class="card-header py-3">
+                    
+                  <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbarL">
+                    <div class="input-group">
+                      <input type="text" class="form-control bg-light border-3 small" placeholder="Search for users..." aria-label="Search" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
                     </div>
+                  </form>
+                    
+                  <h6 class="m-0 font-weight-bold text-primary"></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="content">
+                        <div class="row1">
+                            <div class="block1" style="float: left;">
+                                      <h5>Actions: </h5> <hr>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#familyModal">Add Family Member</button>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#primaryModal">Make Primary Account</button>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#uinfoModal">Edit Profile</button>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#exampleModal">Set Password</button>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#emailModal">Update E-Mail</button> 
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#secModal">Update Security</button>
+                                      <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#updateSub">Update Subscription</button>
+                                <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#mansubModal">Manual Subscription</button>
+                                <button type="button" class="btn btn-primary master" data-toggle="modal" data-target="#serialModal">Update Serial</button>
+                            </div>
+                            <div class="spacer block1" style="float: left; margin-left: 100px;">
+                                <h5>Preview: </h5>
+                                <hr>
+                                <h6 style="margin-bottom: 15px;">First Name:&nbsp;<small class="text-muted"></small></h6>
+                                <h6 class="userLandingText">City:&nbsp;<small class="text-muted"></small></h6>
+                                <h6 class="userLandingText">State/Province:&nbsp;<small class="text-muted"></small></h6>
+                                <h6 class="userLandingText">Zip/Postal Code:&nbsp;<small class="text-muted"></small></h6>
+                                <h6 class="userLandingText">Purchased From:&nbsp;<small class="text-muted"></small></h6>
+                                <h6 class="userLandingText">Platform:&nbsp;<small class="text-muted"></small></h6>
+                                <h6 class="userLandingText">Last Name:&nbsp;<small class="text-muted"></small></h6>
+                                <h6 class="userLandingText">E-Mail:&nbsp;<small class="text-muted"></small></h6>
+                                <h6 class="userLandingText">Phone Number:&nbsp;<small class="text-muted"></small></h6>
+                                <h6 class="userLandingText">Address:&nbsp;<small class="text-muted"></small></h6>
+                                <h6 class="userLandingText">Country:&nbsp;<small class="text-muted"></small></h6>
+                            </div>
+                                <div class="block1" style="float: left; margin-left: 100px;">
+                                    <h5>Subscription: </h5><hr>
+                                    <h6 class="userLandingText">Connect Plan:&nbsp;<small class="text-muted">
+                                    <!-- <%= (user.connPlan) ? 'Yes' : 'No' %> -->
+                                    </small></h6>
+                                    <h6 class="userLandingText">Flex Plan:&nbsp;<small class="text-muted">
+                                        <!-- <%= (user.flexPlan) ? 'Yes' : 'No'  %> -->
+                                        </small></h6>
+                                    <h6 class="userLandingText">Extra Mile:&nbsp;<small class="text-muted">
+                                        <!-- <%= (user.extraMile) ? 'Yes' : 'No'  %> -->
+                                        </small></h6>
+                                    <h6 class="userLandingText">Account Type:&nbsp;<small class="text-muted">
+                                        <!-- <%= (user._id.equals(user.parent)) ? 'Parent' : 'Child' %> -->
+                                        </small></h6>
+                                    <h6 class="userLandingText">Serial:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.serial %> -->
+                                        </small></h6>
+                                    <h6 class="userLandingText">Plan:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.planId %> -->
+                                        </small></h6>
+                                </div>
+                            </div>
+                                 <!--   <br><br><br>
+                                    <div class="centerCC">
+                                        <h5 class="text-info">Not Seeing the right Trial?</h5>
+                                        <a href="/cs/fix90/<%= user._id %>" class="btn btn-primary">Fix 90 days</a>
+                                        <a href="/cs/fix30/<%= user._id %>" class="btn btn-primary">Fix 30 days</a>
+                                    </div> -->
+                        </div>
+                    
                   </div>
                 </div>
+                
+                        <div class="row">
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+                          <!-- Project Card Example -->
+                          <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                              <h6 class="m-0 font-weight-bold text-primary">Family Members</h6>
+                            </div>
+                            <div class="card-body">
+                                  <div class="well">
+                                      <table class="table table-stripped table-hover">
+                                          <thead>
+                                              <tr>
+                                                  <th>Name</th>
+                                                  <th>Email</th>
+                                                  <th>Account Type</th>
+                                              </tr>
+                                             <!-- <tbody>
+                                                  <% family.forEach(function(usr){ %>
+                                                      <%- include('obj/cs-family', {user : usr}); %>
+                                                  <% }) %>
+                                              </tbody> -->
+                                          </thead>
+                                      </table>
+                                  </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+                          <!-- Illustrations -->
+                          <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                              <h6 class="m-0 font-weight-bold text-primary">Selected Products</h6>
+                            </div>
+                            <div class="card-body">
+                              <div class="well">
+                                  <table class="table table-stripped table-hover">
+                                      <thead>
+                                          <tr>
+                                              <th>Product</th>
+                                          </tr>
+                                         <!-- <tbody>
+                                              <% user.products.forEach(function(prod){ %>
+                                                  <%- include('obj/cs-prod', {user : prod}); %>
+                                              <% }) %>
+                                          </tbody> -->
+                                      </thead>
+                                  </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                          </div>
               </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary bg-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="filters.html">
-                            <span class="link-spanner"></span>
-                         Filters
-                        </a>
-                    <div class="col-auto whitening">
-                      <i class="fas fa-filter"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-secondary bg-secondary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="plans.html">
-                            <span class="link-spanner"></span>
-                           Subscriptions
-                        </a>
-                    <div class="col-auto whitening">
-                      <i class="fas fa-clipboard-list"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-warning bg-warning shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="categories.html">
-                            <span class="link-spanner"></span>
-                                Create Class
-                        </a>
-                    <div class="col-auto whitening">
-                      <i class="fas fa-calendar-day"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-success bg-success shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="reports.html" style="">
-                            <span class="link-spanner"></span>
-                             Create Plan
-                        </a>
-                    <div class="col-auto whitening">
-                      <i class="fas fa-address-book"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-danger bg-danger shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="filters.html">
-                            <span class="link-spanner"></span> Rides
-                        </a>
-                    <div class="col-auto whitening">
-                      <span class="fa fa-bicycle"></span> 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info bg-info shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                        <a class="shortcuts card-body" href="plans.html">
-                            <span class="link-spanner"></span>
-                            Users
-                        </a>
-                    <div class="col-auto whitening">
-                        <i class="fas fa-users"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
               
           </div>
-            
-          <!-- Content Row -->
+          <!-- End Content Row -->
 
           <div class="row">
               
@@ -407,7 +456,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.js"></script>
+  <script src="js/sb-admin-3.js"></script>
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
