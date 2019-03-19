@@ -25,9 +25,9 @@
     });
     
     $(window).click(function(e) {
-        console.log(e);
+        console.log(e.target.className);
         
-        if($(e.target).hasClass('td'))
+        if(!$(e.target).hasClass('')) //td has no class
             {
                 $( "#myDropdown" ).removeClass("show");
             }
