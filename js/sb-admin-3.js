@@ -19,6 +19,19 @@
         });
     });
     
+    $("#searchUsrLanding").keypress(function () {
+            if(!$( "#myDropdown" ).is(":visible"))
+                $( "#myDropdown" ).toggleClass("show");
+    });
+    
+    $(window).click(function(e) {
+        console.log(e);
+        
+        if($(e.target).hasClass('td'))
+            {
+                $( "#myDropdown" ).removeClass("show");
+            }
+    });
 
 
 })(jQuery); // End of use strict

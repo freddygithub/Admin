@@ -14,7 +14,8 @@
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+    
+      
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -195,7 +196,7 @@
 
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbar">
+                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbar searchbarRides">
                     <div class="input-group">
                       <input id="searchBar" type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                       <div class="input-group-append">
@@ -205,6 +206,18 @@
                       </div>
                     </div>
                   </form>
+                    
+                    <div class="centerPagination">
+                        <div class="pagination">
+                          <a href="#">&laquo;</a>
+                          <a href="#">1</a>
+                          <a class="active" href="#">2</a>
+                          <a href="#">3</a>
+                          <a href="#">4</a>
+                          <a href="#">5</a>
+                          <a href="#">&raquo;</a>
+                        </div>
+                    </div>
                     
                   <button class="collapsible ddb dropdownButton" id="collapsibleD"><i class="far fa-caret-square-down"></i></button>
                   <h5 class="m-0 font-weight-bold text-primary">OnDemand</h5>
@@ -268,7 +281,7 @@
                 
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbar">
+                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbar searchbarRides">
                     <div class="input-group">
                       <input id="searchBar" type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                       <div class="input-group-append">
@@ -278,6 +291,19 @@
                       </div>
                     </div>
                   </form>
+                    
+                    <div class="centerPagination">
+                        <div class="pagination">
+                          <a href="#">&laquo;</a>
+                          <a href="#">1</a>
+                          <a href="#">2</a>
+                          <a href="#">3</a>
+                          <a href="#">4</a>
+                          <a href="#">5</a>
+                          <a href="#">&raquo;</a>
+                        </div>
+                    </div>
+                    
                   <button class="collapsible ddb dropdownButton" id="collapsibleC"><i class="far fa-caret-square-down"></i></button>
                   <h5 class="m-0 font-weight-bold text-primary"> Classes</h5>
                 </div>
@@ -323,7 +349,7 @@
                                                     <i class="fas fa-trash whitening"></i>
                                                   </a>
                                                 </td>
-                                            </tr>
+                                            </tr>                            
                                         <!-- <tbody>
                                             <% rides.forEach(function(ride) { %>
                                                 <%- include('obj/ride', {ride : ride}); %>
@@ -345,7 +371,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <!-- content goes here -->
-                                    <label for="exampleInputEmail1">Are you sure you want to permanently delete [ClassName] this class?</label>
+                                    <label for="exampleInputEmail1">Are you sure you want to permanently delete this class [ClassName]?</label>
                                 </div>
                                 <div class="modal-footer">
                                     <div class="btn-group btn-group-justified" role="group" aria-label="group button">

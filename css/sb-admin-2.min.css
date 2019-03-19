@@ -12249,6 +12249,8 @@ body.sidebar-toggled footer.sticky-footer {
   display: inline-block;
   float: right;
   width: 500px;
+  border-style: ridge;
+  border-width: 1px;
 }
 .searchbarL {
   display: inline-block;
@@ -12376,3 +12378,60 @@ input[type='file'] {
 .userLandingText{
     margin-bottom: 15px;
 }
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 5px 15px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+  background-color: #2653d4;
+  color: white;
+  border: 1px solid #2653d4;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #4e73df;
+    color: white;
+}
+
+.pagination a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.centerPagination{
+    text-align: center;
+    float: right;
+    margin-right: 100px;
+}
+.leftPagination{
+    float: left;
+    margin-right: 0px;
+}
+.searchbarRides{
+    width: 300px;
+}
+
+.dropdown-content {
+  display: none;
+  width: 900px;
+  margin-top: 40px;
+  margin-left: 16px;
+  position: absolute;
+  background-color: inherit;
+  overflow: auto;
+  box-shadow: 5px 10px 6px 5px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.show {display: block;}
