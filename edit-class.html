@@ -206,14 +206,14 @@
                     <%- include('obj/navbar', {page:''}); %>
                     -->
                     <!-- BUILD OUT PAGE HERE -->
-                    <div class="container centerCC">
+                    <div class="container">
                         <div class="">
                            <!-- <% if (successMsg.length > 0) { %> -->
-                            <div class="alert alert-success">Your class has been successfully created!</div>
+                            <div class="alert alert-success" hidden>Your class has been successfully created!</div>
                           <!--  <% } %> -->
                             <form class="form-horizontal" action="/create/class" method="POST" enctype="multipart/form-data">
-                                <div class="row1">
-                                    <div class="block1">
+                                <div class="row1 centerCC">
+                                    <div class="block2">
                                         <label>Name</label>
                                         <input type="text" class="form-control" name="cname" value="<%= class_.name %>">
                                         <br>
@@ -238,7 +238,7 @@
                                             </select>
                                         <br>
                                     </div>
-                                    <div class="block1 spacer">
+                                    <div class="block2 spacer">
                                         <label>Description</label>
                                         <input type="text" class="form-control" name="cdesc" value="<%= class_.desc %>">
                                         <br>
@@ -301,7 +301,7 @@
                                                 Scenic Ride
                                             </label>
                                         </div>
-                                </div>
+                                        <br>
                                     <!-- <div class="form-group">
                                         <label>Livestream ID</label>
                                         <input type="text" class="form-control" name="lsid">
@@ -315,9 +315,12 @@
                                         <img id="pvimg" style="max-width:480px;max-height:360px;"/>
                                              <!-- src="<%= class_.pUrl %> -->
                                     </div>
+                                    <hr>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-lg">Update</button>
                                     </div>
+                                </div>
+ 
                             </form>
                         </div>
                     </div> 

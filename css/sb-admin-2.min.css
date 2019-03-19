@@ -12363,6 +12363,9 @@ input[type='file'] {
 .shortcutText{
     color: lightslategrey;
 }
+.warningText{
+    color: #e74a3b;
+}
 .master{
     width: 200px;
     margin-bottom: 10px;

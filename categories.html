@@ -239,6 +239,18 @@
                                     </th>
                                 </tr>
                             </thead>
+                                <tr>
+                                    <td>Bob Junior</td>
+                                    <td>123</td>
+                                    <td> 
+                                      <a href="edit-category.html"  class="btn btn-info btn-circle btn-sm">
+                                        <i class="fas fa-edit whitening"></i>
+                                      </a>
+                                      <a class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#squarespaceModal">
+                                        <i class="fas fa-trash whitening"></i>
+                                      </a>
+                                    </td>
+                                </tr>
                             <!-- <tbody>
                                 <% categories.forEach(function(cat) { %>
                                     <%- include('obj/category', {category : cat}); %>
@@ -253,6 +265,32 @@
             </div>
         </div>
         <!-- /.container-fluid -->
+          
+          
+                        <!-- line modal for delete -->
+                        <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="m-0 font-weight-bold text-primary warningText">Warning <i class="fas fa-exclamation-triangle"></i></h3>
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- content goes here -->
+                                    <label for="">Are you sure you want to <strong>permanently</strong> delete this instructor [Cat..Name]?</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                                        <div class="btn-group btn-delete hidden" role="group">
+                                            <button type="button" class="btn btn-info" data-dismiss="modal"  role="button">Close</button>
+                                            
+                                            <button type="button" id="delImage" class="btn btn-danger" data-dismiss="modal" role="button">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
 
       </div>
       <!-- End of Main Content -->

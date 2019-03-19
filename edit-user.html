@@ -212,9 +212,9 @@
                             
                               <form class="form-horizontal" action="/edit/user/<%= user._id %>" method="POST">
                                 <fieldset>
-                                  <div class="container centerCC">
-                                    <div class="row1">
-                                        <div class="block1">
+                                  <div class="container">
+                                    <div class="row1 centerCC">
+                                        <div class="block2">
                                             <div class="form-group">
                                                 <label>First Name</label>
                                                 <input type="text" class="form-control" name="firstName" value="<%= user.firstName %>">
@@ -232,7 +232,7 @@
                                                 <input type="text" class="form-control" name="IGNORE_ME" value="<%= user.gender %>" disabled>
                                             </div>
                                         </div>
-                                        <div class="block1 spacer">
+                                        <div class="block2 spacer">
                                             <div class="form-group">
                                                 <label>Last Name</label>
                                                 <input type="text" class="form-control" name="lastName" value="<%= user.lastName %>">
@@ -253,8 +253,8 @@
                                               </div>
                                           </div>
                                         <br>
-                                  <div class="container centerCC">
-                                    <div class="row1">
+                                  <div class="container">
+                                    <div class="row1 centerCC">
                                         <div class="block2">
                                             <div class="checkbox">
                                                 <label>
@@ -275,6 +275,13 @@
                                                     <input type="hidden" name="canCreateOnDemand" value="false">
                                                     <input type="checkbox" name="canCreateOnDemand" value="true">
                                                     Can Create New On Demand Classes
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="hidden" name="canCreateClass" value="false">
+                                                    <input type="checkbox" name="canCreateClass" value="true">
+                                                    Create New Live Classes
                                                 </label>
                                             </div>
                                             <div class="checkbox">
@@ -309,13 +316,6 @@
                                         </div>
                                         </div>
                                         <div class="block2 spacer">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="hidden" name="canCreateClass" value="false">
-                                                    <input type="checkbox" name="canCreateClass" value="true">
-                                                    Create New Live Classes
-                                                </label>
-                                            </div>
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="hidden" name="canModifyOnDemand" value="false">
@@ -369,7 +369,7 @@
                                       </div>
                                   </div>
                                   
-                                    <br><hr><br>
+                                    <hr>
                                     <div class="form-group">
                                         <div class="col-lg-10 col-lg-offset-2">
                                             <button type="submit" class="btn btn-primary btn-lg">Update</button>
@@ -377,7 +377,6 @@
                                     </div>
                                   </fieldset>
                             </form>
-                          <hr>
                          </div>
                           <!--/tab-pane-->
                         </div>
