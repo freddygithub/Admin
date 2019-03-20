@@ -234,20 +234,18 @@
                   </form>
                     
                     <div id="myDropdown" class="dropdown-content">
-                            <table class="table table-stripped table-hover">
+                        <table class="table table-stripped table-hover">
                                 <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                    </tr>
                                 </thead>
-                                <tr>
-                                    <td>Bob Junior</td>
-                                </tr>
-                                <tr>
-                                    <td>him her</td>
-                                </tr>
-                                <tbody>
-                                    <!-- <% instructors.forEach(function(instr) { %>
-                                        <%- include('obj/instructor', {instr : instr}); %>
-                                    <% }) %> -->
-                                </tbody>
+                                    <tr>
+                                        <td>Bob Junior</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stacey Lumin</td>
+                                    </tr>
                             </table>
                     </div>
                         
@@ -272,17 +270,39 @@
                                 <div class="spacer block1" style="float: left; margin-left: 100px;">
                                     <h5>Preview: </h5>
                                     <hr>
-                                    <h6 style="margin-bottom: 15px;">First Name:&nbsp;<small class="text-muted"></small></h6>
-                                    <h6 class="userLandingText">City:&nbsp;<small class="text-muted"></small></h6>
-                                    <h6 class="userLandingText">State/Province:&nbsp;<small class="text-muted"></small></h6>
-                                    <h6 class="userLandingText">Zip/Postal Code:&nbsp;<small class="text-muted"></small></h6>
-                                    <h6 class="userLandingText">Purchased From:&nbsp;<small class="text-muted"></small></h6>
-                                    <h6 class="userLandingText">Platform:&nbsp;<small class="text-muted"></small></h6>
-                                    <h6 class="userLandingText">Last Name:&nbsp;<small class="text-muted"></small></h6>
-                                    <h6 class="userLandingText">E-Mail:&nbsp;<small class="text-muted"></small></h6>
-                                    <h6 class="userLandingText">Phone Number:&nbsp;<small class="text-muted"></small></h6>
-                                    <h6 class="userLandingText">Address:&nbsp;<small class="text-muted"></small></h6>
-                                    <h6 class="userLandingText">Country:&nbsp;<small class="text-muted"></small></h6>
+                                    <h6 style="margin-bottom: 15px;">First Name:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.firstName %> -->
+                                    </small></h6>
+                                    <h6 class="userLandingText">Last Name:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.lastName %> -->
+                                    </small></h6>
+                                    <h6 class="userLandingText">E-Mail:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.local.email %> -->
+                                    </small></h6>
+                                    <h6 class="userLandingText">Phone Number:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.phone %> -->
+                                    </small></h6>
+                                    <h6 class="userLandingText">Address:&nbsp;<small class="text-muted">
+                                        <!--  <%= user.address %> -->
+                                    </small></h6>
+                                    <h6 class="userLandingText">City:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.city %> -->
+                                    </small></h6>
+                                    <h6 class="userLandingText">State/Province:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.state %> -->
+                                    </small></h6>
+                                    <h6 class="userLandingText">Zip/Postal Code:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.zip %> -->
+                                    </small></h6>
+                                    <h6 class="userLandingText">Purchased From:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.purchasedFrom %> -->
+                                    </small></h6>
+                                    <h6 class="userLandingText">Platform:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.platform %> -->
+                                    </small></h6>
+                                    <h6 class="userLandingText">Country:&nbsp;<small class="text-muted">
+                                        <!-- <%= user.country %> -->
+                                    </small></h6>
                                 </div>
                                     <div class="block1" style="float: left; margin-left: 100px;">
                                         <h5>Subscription: </h5><hr>
