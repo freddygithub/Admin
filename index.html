@@ -296,195 +296,7 @@
                 </div>
               </div>
             </div>
-            
-              
-                <!-- new user row -->
-                <div class="col-xl-12">
-                  <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbar">
-                        <div class="input-group">
-                          <input id="searchBar" type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                          <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                              <i class="fas fa-search fa-sm"></i>
-                            </button>
-                          </div>
-                        </div>
-                      </form>
-                        <button class="collapsible ddb dropdownButton" id="collapsibleC"><i class="far fa-caret-square-down"></i></button>
-                      <h5 class="m-0 font-weight-bold text-primary">New Users</h5>
-                      <p>New members information and search</p>
-                    </div>
-
-                        <!-- views/classes.ejs -->
-                        <!-- <%- include('obj/header', {title: 'Echelon - View Users'}) %> -->
-                        <!-- <%- include('obj/navbar', {page: 'users'}) %> -->
-
-                        <!-- BUILD PAGE HERE -->
-                        <div class="contentT" id="contentC">
-                            <div class="page-header text-center">
-                               <!--  <% if (srch == true) {%><a href="<%= exportUrl %>" class="btn btn-primary btn-lg">Export</a><% } %> -->
-                            </div>
-                            <!-- Decide Pagination -->
-                            <!--  <%
-                                var pagination = "";
-                                var pagina = [];
-                                var range = 10;
-                                var start = 1;
-
-                                var pages = 1;
-
-                                if (total > 50) {
-                                    pages = Math.ceil(total/50);
-
-
-                                    if (page < (range / 2) + 1 ) {
-                                        start = 1;
-
-                                    // Don't go beyond the last page 
-                                    } else if (page >= (pages - (range / 2) )) {
-                                        start = Math.floor(pages - range + 1);
-
-                                    } else {
-                                        start = (page - Math.floor(range / 2));
-                                    }
-
-                                    for (let i = start; i <= ((start + range) - 1); i++) {
-                                        var curl = pageUrl + 'p=' + i;
-                                        if (i == page) {
-                                          pagina.push(`<li class="page-item active"><a class="page-link" href="${curl}">${i}</a></li>`);   
-                                        } else {
-                                            pagina.push(`<li class="page-item"><a class="page-link" href="${curl}">${i}</a></li>`);
-                                        }
-                                    }
-
-                                    var next;
-                                    var prev;
-
-                                    if (page == 1) {
-                                        prev = `<li class="page-item disabled">
-                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                          </li>`;
-                                    } else {
-                                        var ppage = parseInt(page) - 1;
-                                        var prevurl = pageUrl + 'p=' + ppage;
-                                        prev = `<li class="page-item">
-                                            <a class="page-link" href="${prevurl}" tabindex="-1">Previous</a>
-                                          </li>`;
-                                    }
-
-                                    if (page == pages) {
-                                        next = `<li class="page-item disabled">
-                                            <a class="page-link" href="#" tabindex="-1">Next</a>
-                                          </li>`;
-                                    } else {
-                                        var npage = parseInt(page) + 1;
-                                        var nexturl = pageUrl + 'p=' + npage;
-                                        next = `<li class="page-item">
-                                            <a class="page-link" href="${nexturl}" tabindex="-1">Next</a>
-                                          </li>`;
-                                    }
-
-
-                                    pagination = `<nav aria-label="...">
-                                        <ul class="pagination">
-                                          ${prev}
-                                          ${pagina.join('\n')}
-                                          ${next}
-                                        </ul>
-                                      </nav>`;
-
-
-                                }
-                            %> -->
-                            <!-- Pagination -->
-                            <!--  <%- pagination %> -->
-                            <table class="table table-stripped table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Signed Up</th>
-                                        <th>Purchased From</th>
-                                        <th>Subscriber</th>
-                                        <th>View Admin</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                    <tr>
-                                        <td>Bob Junior</td>
-                                        <td>Bob.Junior@gmail.com</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td> 
-                                          <a href="edit-user.html"  class="btn btn-info btn-circle btn-sm">
-                                            <i class="fas fa-edit whitening"></i>
-                                          </a>
-                                          <a class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#squarespaceModal">
-                                            <i class="fas fa-trash whitening"></i>
-                                          </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Stacey Lumin</td>
-                                        <td>stlumin@gmail.com</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td> 
-                                          <a href="edit-user.html" class="btn btn-info btn-circle btn-sm">
-                                            <i class="fas fa-edit whitening"></i>
-                                          </a>
-                                          <a class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#squarespaceModal">
-                                            <i class="fas fa-trash whitening"></i>
-                                          </a>
-                                        </td>
-                                    </tr>
-                                    <!-- <tbody>
-                                         <% users.forEach(function(user){ %>
-                                            <%- include('obj/usr', {user : user}); %>
-                                        <% }) %> 
-                                    </tbody> -->
-                            </table>
-                            <!-- <%- pagination %> -->
-                            <!-- Pagination -->
-                        </div>
-
-                        <!-- <%- include('obj/footer') %> -->
-
-                            <!-- line modal for delete -->
-                                <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-                                  <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h3 class="m-0 font-weight-bold text-primary">Warning <i class="fas fa-exclamation-triangle"></i></h3>
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <!-- content goes here -->
-                                            <label for="exampleInputEmail1">Are you sure you want to <strong>permanently</strong> delete [UserName] this user?</label>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <div class="btn-group btn-group-justified" role="group" aria-label="group button">
-                                                <div class="btn-group btn-delete hidden" role="group">
-                                                    <button type="button" class="btn btn-info" data-dismiss="modal"  role="button">Close</button>
-
-                                                    <button type="button" id="delImage" class="btn btn-danger" data-dismiss="modal" role="button">Delete</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              <!-- end line modal for delete -->
-                </div>
-              </div>
-            <!-- end new user row -->
-              
+                          
               
         <!-- Content Row -->
         <div class="col-xl">
@@ -590,6 +402,193 @@
           </div>
         </div>
           <!-- Content Row -->
+              
+        <!-- new user row -->
+        <div class="col-xl-12">
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+             <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search searchbar">
+                <div class="input-group">
+                  <input id="searchBar" type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                      <i class="fas fa-search fa-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+                <button class="collapsible ddb dropdownButton" id="collapsibleC"><i class="far fa-caret-square-down"></i></button>
+              <h5 class="m-0 font-weight-bold text-primary">New Users</h5>
+              <p>New members information and search</p>
+            </div>
+
+                <!-- views/classes.ejs -->
+                <!-- <%- include('obj/header', {title: 'Echelon - View Users'}) %> -->
+                <!-- <%- include('obj/navbar', {page: 'users'}) %> -->
+
+                <!-- BUILD PAGE HERE -->
+                <div class="contentT" id="contentC">
+                    <div class="page-header text-center">
+                       <!--  <% if (srch == true) {%><a href="<%= exportUrl %>" class="btn btn-primary btn-lg">Export</a><% } %> -->
+                    </div>
+                    <!-- Decide Pagination -->
+                    <!--  <%
+                        var pagination = "";
+                        var pagina = [];
+                        var range = 10;
+                        var start = 1;
+
+                        var pages = 1;
+
+                        if (total > 50) {
+                            pages = Math.ceil(total/50);
+
+
+                            if (page < (range / 2) + 1 ) {
+                                start = 1;
+
+                            // Don't go beyond the last page 
+                            } else if (page >= (pages - (range / 2) )) {
+                                start = Math.floor(pages - range + 1);
+
+                            } else {
+                                start = (page - Math.floor(range / 2));
+                            }
+
+                            for (let i = start; i <= ((start + range) - 1); i++) {
+                                var curl = pageUrl + 'p=' + i;
+                                if (i == page) {
+                                  pagina.push(`<li class="page-item active"><a class="page-link" href="${curl}">${i}</a></li>`);   
+                                } else {
+                                    pagina.push(`<li class="page-item"><a class="page-link" href="${curl}">${i}</a></li>`);
+                                }
+                            }
+
+                            var next;
+                            var prev;
+
+                            if (page == 1) {
+                                prev = `<li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                  </li>`;
+                            } else {
+                                var ppage = parseInt(page) - 1;
+                                var prevurl = pageUrl + 'p=' + ppage;
+                                prev = `<li class="page-item">
+                                    <a class="page-link" href="${prevurl}" tabindex="-1">Previous</a>
+                                  </li>`;
+                            }
+
+                            if (page == pages) {
+                                next = `<li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Next</a>
+                                  </li>`;
+                            } else {
+                                var npage = parseInt(page) + 1;
+                                var nexturl = pageUrl + 'p=' + npage;
+                                next = `<li class="page-item">
+                                    <a class="page-link" href="${nexturl}" tabindex="-1">Next</a>
+                                  </li>`;
+                            }
+
+
+                            pagination = `<nav aria-label="...">
+                                <ul class="pagination">
+                                  ${prev}
+                                  ${pagina.join('\n')}
+                                  ${next}
+                                </ul>
+                              </nav>`;
+
+
+                        }
+                    %> -->
+                    <!-- Pagination -->
+                    <!--  <%- pagination %> -->
+                    <table class="table-sm table-light table-stripped table-hover tableDashboard">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Signed Up</th>
+                                <th>Purchased From</th>
+                                <th>Subscriber</th>
+                                <th>View Admin</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                            <tr>
+                                <td>Bob Junior</td>
+                                <td>Bob.Junior@gmail.com</td>
+                                <td>words</td>
+                                <td>phone</td>
+                                <td>1/10/10</td>
+                                <td>no</td>
+                                <td> 
+                                  <a href="edit-user.html"  class="btn btn-info btn-circle btn-sm">
+                                    <i class="fas fa-edit whitening"></i>
+                                  </a>
+                                  <a class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#squarespaceModal">
+                                    <i class="fas fa-trash whitening"></i>
+                                  </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Stacey Lumin</td>
+                                <td>stlumin@gmail.com</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td> 
+                                  <a href="edit-user.html" class="btn btn-info btn-circle btn-sm">
+                                    <i class="fas fa-edit whitening"></i>
+                                  </a>
+                                  <a class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#squarespaceModal">
+                                    <i class="fas fa-trash whitening"></i>
+                                  </a>
+                                </td>
+                            </tr>
+                            <!-- <tbody>
+                                 <% users.forEach(function(user){ %>
+                                    <%- include('obj/usr', {user : user}); %>
+                                <% }) %> 
+                            </tbody> -->
+                    </table>
+                    <!-- <%- pagination %> -->
+                    <!-- Pagination -->
+                </div>
+
+                <!-- <%- include('obj/footer') %> -->
+
+                    <!-- line modal for delete -->
+                        <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="m-0 font-weight-bold text-primary">Warning <i class="fas fa-exclamation-triangle"></i></h3>
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- content goes here -->
+                                    <label for="exampleInputEmail1">Are you sure you want to <strong>permanently</strong> delete [UserName] this user?</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                                        <div class="btn-group btn-delete hidden" role="group">
+                                            <button type="button" class="btn btn-info" data-dismiss="modal"  role="button">Close</button>
+
+                                            <button type="button" id="delImage" class="btn btn-danger" data-dismiss="modal" role="button">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      <!-- end line modal for delete -->
+        </div>
+        </div>
+        <!-- end new user row -->
               
             <!-- Area Chart optional not current -->
             <div class="col-xl-8 col-lg-7" hidden>

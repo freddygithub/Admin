@@ -1809,7 +1809,8 @@ pre code {
 }
 
 .table-sm td,.table-sm th {
-  padding: .3rem;
+  padding: .75rem;
+  width: 15%;
 }
 
 .table-bordered {
@@ -12440,3 +12441,6 @@ input[type='file'] {
   z-index: 1;
 }
 .show {display: block;}
+
+.tableDashboard{
+}
