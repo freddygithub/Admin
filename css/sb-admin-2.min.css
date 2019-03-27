@@ -11742,10 +11742,12 @@ a:focus {
 }
 
 .bg-login-image {
+  background: url(../img/Echelon-Smart-Connect-Indoor-Exercise-Bike-01.jpg);
   background-position: center;
   background-size: cover;
   padding-bottom: 40px;
   padding-right: 80px;
+  background-repeat: no-repeat;
 }
 
 .bg-register-image {
@@ -12480,4 +12482,8 @@ input[type='file'] {
 .imging:hover {
     webkit-filter: blur(4px);
     filter: blur(4px);
+}
+.loginImg{
+    max-width: 100%;
+    object-fit: contain;
 }
