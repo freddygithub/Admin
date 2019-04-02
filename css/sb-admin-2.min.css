@@ -367,6 +367,9 @@ template {
 .h6,h6 {
   font-size: 1rem;
 }
+.h7,h7 {
+  font-size: .85rem;
+}
 
 .lead {
   font-size: 1.25rem;
@@ -1799,7 +1802,17 @@ pre code {
   border-top: 1px solid #e3e6f0;
 }
 
+.table-sm td,.table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #e3e6f0;
+}
+
 .table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #e3e6f0;
+}
+.table-sm thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #e3e6f0;
 }
@@ -1810,9 +1823,9 @@ pre code {
 
 .table-sm td,.table-sm th {
   padding: .75rem;
-  width: 15%;
+  width: 100%;
+  white-space: nowrap;
 }
-
 .table-bordered {
   border: 1px solid #e3e6f0;
 }
@@ -10704,7 +10717,7 @@ a:focus {
 }
 
 #wrapper #content-wrapper {
-  background-color: #f8f9fc;
+  background-color: white;
   width: 100%;
   overflow-x: hidden;
 }
@@ -10812,7 +10825,7 @@ a:focus {
 }
 
 .bg-gradient-primary {
-  background-color: whitesmoke;
+  background-color: white;
 
   background-size: cover;
 }
@@ -10890,7 +10903,7 @@ a:focus {
 }
 
 .text-lg {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .text-gray-100 {
@@ -12293,14 +12306,38 @@ body.sidebar-toggled footer.sticky-footer {
 .row1 {
   width: 100%;
 }
-
+.row2 {
+  width: 100%;
+}
+.row3 {
+  width: 50%;
+  margin: 0 auto;
+}
+.row4 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
 .block1 {
   width: 200px;
   display: inline-block;
 }
 .block2 {
-  width: 300px;
+  width: 350px;
   display: inline-block;
+}
+.block3 {
+  width: 250px;
+  display: inline-block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.block4 {
+  width: 100px;
+  display: inline-block;
+}
+.block4 p{
+    height: 25px
 }
 .spacer {
   float: right;
@@ -12314,6 +12351,10 @@ body.sidebar-toggled footer.sticky-footer {
   width: 800px; 
   margin: 0 auto;
   padding: 0px 100px;  
+}
+.centerAC{
+    width: 80%;
+    margin: 0 auto;  
 }
 .padd{
   padding: 0px 200px;
@@ -12343,7 +12384,7 @@ body.sidebar-toggled footer.sticky-footer {
     z-index: 1;
 }
 .bodyBox{
-    height: 120px;
+    height: 100px;
 }
 .shortcutBody:hover img{
     -webkit-filter: blur(5px);
@@ -12357,8 +12398,8 @@ body.sidebar-toggled footer.sticky-footer {
 text-decoration: underline;
 }
 .shortcutsimg{
-    max-width:100%;
-    object-fit: 'contain';
+    object-fit: contain;
+    max-width: 100%;
     -webkit-filter:brightness(70%);
     -moz-filter:brightness(70%);
     filter: url(#brightness);
@@ -12370,7 +12411,8 @@ text-decoration: underline;
 }
 .export{
     font-size: 12px;
-    width: 180px;
+    width: 250px;
+    height: 40px;
 }
 input[type='file'] {
   color: transparent;
@@ -12476,9 +12518,6 @@ input[type='file'] {
 }
 .show {display: block;}
 
-.tableDashboard{
-}
-
 .imging:hover {
     webkit-filter: blur(4px);
     filter: blur(4px);
@@ -12486,4 +12525,15 @@ input[type='file'] {
 .loginImg{
     max-width: 100%;
     object-fit: contain;
+}
+.btn-text{
+    padding-top: 5px;
+}
+.profilePic{
+  background: url(../img/Echelon-Smart-Connect-Indoor-Exercise-Bike-01.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
 }
